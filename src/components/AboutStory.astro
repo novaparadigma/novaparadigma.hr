@@ -1,0 +1,170 @@
+<section class="about-story">
+  <div class="about-story__inner">
+    <div class="about-story__text">
+      <p>
+        Ovo nije priča o tome kako je nastala jedna škola.
+      </p>
+
+      <p>
+        To je priča o znanju koje se stoljećima prenosilo<br />
+        od čovjeka do čovjeka, kroz odnos, iskustvo i život.
+      </p>
+
+      <p>
+        Prije više od četrdeset godina život me doveo<br />
+        do ljudi koji su mi prenijeli znanje koje se nije<br />
+        moglo naučiti iz knjiga.
+      </p>
+
+      <p>
+        Auguste, Madame Aurore i Gérard bili su posljednja<br />
+        generacija od koje sam mogao učiti izravno.
+      </p>
+
+      <p>
+        Kasnije su Adrien i Gabriel postali moji učitelji<br />
+        i prijatelji, nastavljajući prenositi isto znanje<br />
+        na suvremen način.
+      </p>
+
+      <p>
+        Godinama nisam pokušavao naučiti njihove odgovore.<br />
+        Učio sam promatrati, provjeravati i živjeti ono što<br />
+        su mi pokazivali.
+      </p>
+
+      <p>
+        Danas, nakon više od četrdeset godina osobnog<br />
+        iskustva, istraživanja i prakse, to znanje<br />
+        živi kroz školu <strong>NOvA</strong>.
+      </p>
+
+      <p>
+        Ne kao skup ideja.<br />
+        Nego kao iskustvo koje svatko može provjeriti<br />
+        vlastitim životom.
+      </p>
+    </div>
+
+    <div class="about-story__image">
+      <img
+        src="/images/sections/about-compass.webp"
+        alt="Kompas na stijeni s planinama u pozadini"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-story {
+    padding: 58px 60px 34px;
+    background: #f7f1e9;
+    color: #302a26;
+  }
+
+  .about-story__inner {
+    width: min(100%, 1332px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(360px, 0.9fr) minmax(520px, 1.35fr);
+    gap: 72px;
+    align-items: stretch;
+  }
+
+  .about-story__text {
+    padding: 8px 0 6px 24px;
+  }
+
+  .about-story__text p {
+    margin: 0 0 23px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.42;
+    color: #342e29;
+  }
+
+  .about-story__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-story__text strong {
+    font-weight: 600;
+    color: #9b6c49;
+  }
+
+  .about-story__image {
+  transform: translateY(-18px);
+  min-width: 0;
+  height: auto;
+  align-self: start;
+  margin-top: 8px;
+  background: transparent;
+}
+
+.about-story__image img {
+  display: block;
+  width: 82%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  
+}
+
+.about-story__inner {
+  align-items: start;
+}
+
+  @media (max-width: 1100px) {
+  .about-story {
+    padding-inline: 36px;
+  }
+
+  .about-story__inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .about-story__text {
+    padding-left: 0;
+  }
+
+  .about-story__image {
+    display: none;
+  }
+}
+
+  @media (max-width: 700px) {
+    .about-story {
+      padding: 42px 20px 28px;
+    }
+
+    .about-story__inner {
+      gap: 30px;
+    }
+
+    .about-story__text p {
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+
+    .about-story__text br {
+      display: none;
+    }
+
+    .about-story__image {
+      min-height: 0;
+      width: 100%;
+      margin-top: 10px;
+      background: transparent;
+    }
+    
+    .about-story__image img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+      
+    }
+  }
+</style>

@@ -1,0 +1,31 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  fill="none"
+  aria-hidden="true"
+>
+
+  <!-- Cerchio esterno -->
+  <circle
+    cx="32"
+    cy="32"
+    r="19"
+    stroke="currentColor"
+    stroke-width="1.55"/>
+
+  <!-- Cerchio interno -->
+  <circle
+    cx="32"
+    cy="32"
+    r="9"
+    stroke="currentColor"
+    stroke-width="1.55"/>
+
+  <!-- Punto centrale -->
+  <circle
+    cx="32"
+    cy="32"
+    r="2.3"
+    fill="currentColor"/>
+
+</svg>

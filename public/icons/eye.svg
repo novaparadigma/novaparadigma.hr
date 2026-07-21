@@ -1,0 +1,39 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 40"
+    fill="none"
+>
+
+    <!-- Contorno -->
+
+    <path
+        d="M6 20
+           Q18 6 32 6
+           Q46 6 58 20
+           Q46 34 32 34
+           Q18 34 6 20Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linejoin="round"
+    />
+
+    <!-- Iride -->
+
+    <circle
+        cx="32"
+        cy="20"
+        r="8"
+        stroke="currentColor"
+        stroke-width="1.5"
+    />
+
+    <!-- Pupilla -->
+
+    <circle
+        cx="32"
+        cy="20"
+        r="1.8"
+        fill="currentColor"
+    />
+
+</svg>

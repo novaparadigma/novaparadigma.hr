@@ -1,0 +1,234 @@
+<section class="contact-hero">
+  <img
+    class="contact-hero__image"
+    src="/images/sections/contact-main.webp"
+    alt="Otvorena kamena vrata koja vode prema osvijetljenom vrtu"
+  />
+
+  <div class="contact-hero__overlay"></div>
+
+  <div class="contact-hero__inner">
+    <div class="contact-hero__content">
+      <p class="contact-hero__eyebrow">KONTAKT</p><br />
+
+      <h1>
+        Nismo ovdje da<br />
+        te uvjerimo.<br />
+        <span>Samo da se upoznamo.</span>
+      </h1>
+
+      <span class="contact-hero__line contact-hero__line--bottom"></span>
+
+      <span class="contact-hero__plant" aria-hidden="true">
+        <svg viewBox="0 0 46 58">
+          <path d="M23 54V25" />
+          <path d="M23 35c-8.8-1.3-13.8-6.2-15-14.6 8.8 1.3 13.8 6.2 15 14.6Z" />
+          <path d="M23 27c8.3-1.2 13-5.8 14.1-13.8C28.8 14.4 24.1 19 23 27Z" />
+          <path d="M23 44c-6.2-.8-9.8-4.2-10.8-10.1 6.2.8 9.8 4.2 10.8 10.1Z" />
+        </svg>
+      </span>
+
+      <div class="contact-hero__text">
+        <p>
+          Ako osjećaš da je NOvA dio tvog puta,<br />
+          bit će nam drago upoznati te.
+        </p>
+
+        <p>
+          Možeš se odmah prijaviti ili nam jednostavno<br />
+          poslati pitanje. Odgovorit ćemo ti u najkraćem<br />
+          mogućem roku.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-hero {
+    position: relative;
+    width: 100%;
+    min-height: 640px;
+    overflow: hidden;
+    background: #171512;
+  }
+
+  .contact-hero__image {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .contact-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(9, 11, 8, 0.96) 0%,
+        rgba(9, 11, 8, 0.86) 28%,
+        rgba(9, 11, 8, 0.48) 51%,
+        rgba(9, 11, 8, 0.08) 78%,
+        rgba(9, 11, 8, 0) 100%
+      );
+  }
+
+  .contact-hero__inner {
+    position: relative;
+    z-index: 2;
+    width: min(1332px, calc(100% - 120px));
+    min-height: 640px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-hero__content {
+    width: min(100%, 590px);
+    padding: 55px 0 48px;
+    color: #f6f0e9;
+  }
+
+  .contact-hero__eyebrow {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #c18758;
+  }
+
+  .contact-hero__line {
+    display: block;
+    width: 42px;
+    height: 1px;
+    background: #a8734c;
+  }
+
+  .contact-hero__line--top {
+    margin: 22px 0 20px;
+  }
+
+  .contact-hero__line--bottom {
+    margin: 18px 0 14px;
+  }
+
+  .contact-hero h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 4.55vw, 66px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: #fbf6ef;
+  }
+
+  .contact-hero h1 span {
+    color: #c98d5f;
+  }
+
+  .contact-hero__plant {
+    display: block;
+    width: 38px;
+    height: 50px;
+    margin-bottom: 12px;
+    color: #f6f0e8;
+  }
+
+  .contact-hero__plant svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .contact-hero__text {
+    max-width: 480px;
+  }
+
+  .contact-hero__text p {
+    margin: 0 0 16px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.48;
+    color: rgba(250, 245, 237, 0.94);
+  }
+
+  .contact-hero__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 1100px) {
+    .contact-hero__inner {
+      width: calc(100% - 72px);
+    }
+
+    .contact-hero__overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(9, 11, 8, 0.96) 0%,
+          rgba(9, 11, 8, 0.82) 46%,
+          rgba(9, 11, 8, 0.25) 100%
+        );
+    }
+  }
+
+  @media (max-width: 700px) {
+    .contact-hero {
+      min-height: 690px;
+    }
+
+    .contact-hero__image {
+      object-position: 61% center;
+    }
+
+    .contact-hero__overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(9, 11, 8, 0.94) 0%,
+          rgba(9, 11, 8, 0.82) 68%,
+          rgba(9, 11, 8, 0.38) 100%
+        );
+    }
+
+    .contact-hero__inner {
+      width: calc(100% - 40px);
+      min-height: 690px;
+      padding: 10px 0 42px;
+      align-items: flex-start;
+    }
+
+    .contact-hero__content {
+      padding: 100px 0 44px;
+    }
+
+    .contact-hero__eyebrow {
+      font-size: 12px;
+    }
+
+    .contact-hero h1 {
+      font-size: 44px;
+    }
+
+    .contact-hero__text p {
+      font-size: 17px;
+    }
+
+    .contact-hero__text br {
+      display: none;
+    }
+  }
+</style>

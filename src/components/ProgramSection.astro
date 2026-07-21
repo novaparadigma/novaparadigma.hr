@@ -1,0 +1,776 @@
+---
+import ProgramIcon from "./ProgramIcon.astro";
+import ProgramBottom from "./ProgramBottom.astro";
+const years = [
+  {
+    number: "1.",
+    title: "PROMATRATI",
+    quote: "Sve počinje načinom na koji gledaš.",
+    closing:
+      "Na kraju prve godine nećeš imati više odgovora. Ali ćeš početi postavljati drugačija pitanja.",
+    topics: [
+      {
+        icon: "/icons/eye.svg",
+        title: "Tiha pažnja i duboko slušanje",
+        text: "Usporavamo unutarnji dijalog i učimo jasnije čuti sebe i ono što nas okružuje.",
+      },
+      {
+        icon: "/icons/horizon.svg",
+        title: "Širenje percepcije",
+        text: "Prepoznajemo naučene obrasce i izlazimo iz automatskih reakcija.",
+      },
+      {
+        icon: "/icons/circle.svg",
+        title: "Snovi i svjesno prisustvo u snu",
+        text: "Prve tehnike za prepoznavanje i širenje svijesti tijekom sna.",
+      },
+      {
+        icon: "/icons/target.svg",
+        title: "Mapiranje automatizama",
+        text: "Otkrivamo nesvjesne obrasce misli, emocija i ponašanja koji nas oblikuju.",
+      },
+      {
+        icon: "/icons/infinity.svg",
+        title: "Rekapitulacija",
+        text: "Vraćamo i oslobađamo energiju iz prošlih iskustava i emocionalnih čvorova.",
+      },
+      {
+        icon: "/icons/heart.svg",
+        title: "Simboličko i arhetipsko čitanje",
+        text: "Učimo razumjeti unutarnje slike i znakove koji se pojavljuju u životu i snovima.",
+      },
+    ],
+  },
+  {
+    number: "2.",
+    title: "TRANSFORMIRATI",
+    quote: "Kada jasno vidiš, promjena više nije borba.",
+    closing:
+      "Nećeš postati netko drugi. Počet ćeš sve manje živjeti iz onoga što nisi.",
+    topics: [
+      {
+        icon: "/icons/infinity.svg",
+        title: "Rad s podsvjesnim blokadama",
+        text: "Osvještavanje i transformacija ograničenja kroz unutarnje procese i tjelesni rad.",
+      },
+      {
+        icon: "/icons/horizon.svg",
+        title: "Energetski pokreti",
+        text: "Sekvence koje donose jasnoću, fokus, vitalnost i unutarnju sabranost.",
+      },
+      {
+        icon: "/icons/eye.svg",
+        title: "Samosvjesni snovi i vizualizacije",
+        text: "Istražujemo snove kao prostor za uvid, iscjeljenje i stvaranje namjere.",
+      },
+      {
+        icon: "/icons/heart.svg",
+        title: "Oslobađanje emocija",
+        text: "Integriramo potisnute osjećaje i ponovno se povezujemo s tijelom.",
+      },
+      {
+        icon: "/icons/circle.svg",
+        title: "Unutarnja trijeznost",
+        text: "Razvijamo jasnu percepciju bez iluzija, idealizacija i unutarnje buke.",
+      },
+      {
+        icon: "/icons/target.svg",
+        title: "Simboli i arhetipovi",
+        text: "Koristimo unutarnje slike za dublje razumijevanje životnih odluka.",
+      },
+    ],
+  },
+  {
+    number: "3.",
+    title: "INTEGRIRATI",
+    quote: "Znanje postaje stvarno tek kada postane način života.",
+    closing:
+      "Put ne završava završetkom škole. Tada tek počinje živjeti kroz tebe.",
+    topics: [
+      {
+        icon: "/icons/circle.svg",
+        title: "Prisutnost u svakodnevici",
+        text: "Kako ostati svjestan tijekom rada, odnosa i konkretnih životnih izazova.",
+      },
+      {
+        icon: "/icons/infinity.svg",
+        title: "Riječ i tišina",
+        text: "Govor koji ne rasipa energiju i moć osluškivanja u tišini.",
+      },
+      {
+        icon: "/icons/target.svg",
+        title: "Jasnoća u izborima i odnosima",
+        text: "Donošenje odluka iz unutarnjeg mira, bez impulzivnosti i straha.",
+      },
+      {
+        icon: "/icons/heart.svg",
+        title: "Osobni rituali",
+        text: "Kreiramo prakse koje dugoročno podržavaju naš unutarnji rast.",
+      },
+      {
+        icon: "/icons/horizon.svg",
+        title: "Snovi i intuicija u životu",
+        text: "Održavamo kontakt sa snovima i intuicijom kao izvorom vodstva.",
+      },
+      {
+        icon: "/icons/eye.svg",
+        title: "Samostalni put",
+        text: "Kako nastaviti vlastitu praksu i učvrstiti ono što je postignuto.",
+      },
+    ],
+  },
+];
+
+const meetingSteps = [
+  {
+    icon: "/icons/circle.svg",
+    time: "20:00",
+    label: "Dolazak",
+  },
+  {
+    icon: "/icons/eye.svg",
+    label: "Tiha pažnja",
+  },
+  {
+    icon: "/icons/horizon.svg",
+    label: "Novo predavanje",
+  },
+  {
+    icon: "/icons/infinity.svg",
+    label: "Primjeri iz života",
+  },
+  {
+    icon: "/icons/heart.svg",
+    label: "Pitanja i dijeljenje",
+  },
+  {
+    icon: "/icons/target.svg",
+    label: "Praksa za sljedeća dva tjedna",
+  },
+];
+
+const participationItems = [
+  "Online uživo",
+  "Snimke svih predavanja",
+  "Materijali nakon svakog susreta",
+  "WhatsApp zajednica",
+  "Proljetno povlačenje",
+];
+---
+
+<section class="program-page">
+  <section class="program-hero">
+    <img
+      class="program-hero__image"
+      src="/images/sections/program-main.webp"
+      alt="Put kroz šumu i kamenje složeno u ravnoteži"
+    />
+
+    <div class="program-hero__overlay"></div>
+
+    <div class="program-hero__container">
+      <div class="program-hero__content">
+        <p class="program-eyebrow">PROGRAM I TEHNIKE</p>
+
+        <h1>
+          Ne učimo što misliti.<br />
+          Učimo kako promatrati.
+        </h1>
+
+        <span class="program-line"></span>
+
+        <div class="program-hero__text">
+          <p>
+            Sve što radimo u NOvA proizlazi iz jednog jednostavnog načela:
+            <em>iskustvo dolazi prije objašnjenja.</em>
+          </p>
+
+          <p>
+            Zato svaka tehnika, svaka praksa i svaki susret imaju isti cilj:
+            ne dodati još jednu ideju, nego promijeniti kvalitetu pažnje s
+            kojom promatramo vlastiti život.
+          </p>
+
+          <p>
+            Online susreti, svakodnevne vježbe i proljetno povlačenje nisu
+            odvojeni dijelovi programa. Oni čine jedan proces koji se nastavlja
+            između predavanja, u svakodnevnim situacijama, odnosima, radu i
+            snovima.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-years">
+    <div class="program-years__container">
+      {
+        years.map((year) => (
+          <article class="program-column">
+            <header class="program-column__header">
+              <p class="program-column__number">
+                {year.number} <span>GODINA</span>
+              </p>
+
+              <h2>{year.title}</h2>
+
+              <p class="program-column__quote">
+                “{year.quote}”
+              </p>
+
+              <span class="program-column__line"></span>
+            </header>
+
+            <div class="program-topics">
+              {
+                year.topics.map((topic) => (
+                  <div class="program-topic">
+                    <div class="program-topic__icon">
+                      <ProgramIcon title={topic.title} />
+                    </div>
+
+                    <div class="program-topic__content">
+                      <h3>{topic.title}</h3>
+                      <p>{topic.text}</p>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+
+            <p class="program-column__closing">
+              {year.closing}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <ProgramBottom />
+</section>
+
+<style>
+  .program-page {
+    background: #f7f1e9;
+    color: #292521;
+  }
+
+  .program-hero {
+    position: relative;
+    min-height: 585px;
+    overflow: hidden;
+  }
+
+  .program-hero__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .program-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(18, 18, 14, 0.91) 0%,
+        rgba(18, 18, 14, 0.78) 30%,
+        rgba(18, 18, 14, 0.3) 58%,
+        rgba(18, 18, 14, 0.04) 100%
+      );
+  }
+
+  .program-hero__container {
+    position: relative;
+    z-index: 2;
+    width: min(1332px, calc(100% - 120px));
+    min-height: 585px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .program-hero__content {
+    width: min(100%, 520px);
+    padding: 54px 0;
+    color: #f7f1e9;
+  }
+
+  .program-eyebrow {
+    margin: 0 0 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.13em;
+    color: #c69a74;
+  }
+
+  .program-hero h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(45px, 4.4vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+    color: #fffaf3;
+  }
+
+  .program-line {
+    display: block;
+    width: 55px;
+    height: 1px;
+    margin: 30px 0;
+    background: #b78c68;
+  }
+
+  .program-hero__text {
+    width: min(100%, 475px);
+  }
+
+  .program-hero__text p {
+    margin: 0 0 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255, 250, 243, 0.92);
+  }
+
+  .program-hero__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .program-hero__text em {
+    color: #d5a67f;
+  }
+
+  .program-years {
+    padding: 38px 60px 58px;
+    background: #f7f1e9;
+  }
+
+  .program-years__container {
+    width: min(100%, 1332px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .program-column {
+    min-width: 0;
+    padding: 0 28px;
+    border-right: 1px solid rgba(77, 61, 49, 0.16);
+  }
+
+  .program-column:first-child {
+    padding-left: 10px;
+  }
+
+  .program-column:last-child {
+    padding-right: 10px;
+    border-right: 0;
+  }
+
+  .program-column__header {
+    margin-bottom: 26px;
+  }
+
+  .program-column__number {
+    margin: 0 0 7px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    line-height: 1;
+    color: #9d6e4a;
+  }
+
+  .program-column__number span {
+    margin-left: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+  }
+
+  .program-column h2 {
+    margin: 0 0 5px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 1.05;
+  }
+
+  .program-column__quote {
+    min-height: 46px;
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #a26f49;
+  }
+
+  .program-column__line {
+    display: block;
+    width: 45px;
+    height: 1px;
+    margin-top: 18px;
+    background: #c69a74;
+  }
+
+  .program-topics {
+    display: grid;
+    gap: 7px;
+  }
+
+  .program-topic {
+    min-height: 92px;
+    display: grid;
+    grid-template-columns: 68px minmax(0, 1fr);
+    align-items: stretch;
+    background: rgba(238, 228, 216, 0.63);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .program-topic__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(119, 89, 65, 0.18);
+  }
+
+  .program-topic__icon img {
+    display: block;
+    width: 37px;
+    height: 37px;
+    object-fit: contain;
+  }
+
+  .program-topic__content {
+    padding: 13px 13px 12px;
+  }
+
+  .program-topic h3 {
+    margin: 0 0 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.18;
+  }
+
+  .program-topic p {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #403832;
+  }
+
+  .program-column__closing {
+    min-height: 62px;
+    margin: 25px 0 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    line-height: 1.38;
+    color: #9b6947;
+  }
+
+  .program-practical {
+    padding: 0 60px 56px;
+    background: #f7f1e9;
+  }
+
+  .program-practical__container {
+    width: min(100%, 1332px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.22fr 1fr;
+    gap: 16px;
+  }
+
+  .meeting-card,
+  .participation-card {
+    border: 1px solid rgba(123, 91, 68, 0.22);
+    border-radius: 7px;
+    overflow: hidden;
+    background: rgba(246, 239, 230, 0.82);
+  }
+
+  .meeting-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meeting-card__content {
+    padding: 30px 30px 24px;
+  }
+
+  .meeting-card h2,
+  .participation-card h2 {
+    margin: 0 0 28px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .meeting-steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .meeting-step {
+    width: 78px;
+    text-align: center;
+  }
+
+  .meeting-step__icon {
+    width: 49px;
+    height: 49px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .meeting-step__icon img {
+    display: block;
+    width: 39px;
+    height: 39px;
+    object-fit: contain;
+  }
+
+  .meeting-step p {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .meeting-step strong,
+  .meeting-step span {
+    display: block;
+  }
+
+  .meeting-step strong {
+    font-weight: 500;
+  }
+
+  .meeting-arrow {
+    margin-top: 18px;
+    font-size: 18px;
+    color: #a77b58;
+  }
+
+  .meeting-card__image {
+    display: block;
+    width: 100%;
+    height: 165px;
+    margin-top: auto;
+    object-fit: cover;
+  }
+
+  .participation-card {
+    position: relative;
+    min-height: 430px;
+  }
+
+  .participation-card__content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+  }
+
+  .participation-card ul {
+    width: 58%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .participation-card li {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+  }
+
+  .participation-check {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #a77b58;
+    border-radius: 50%;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    color: #a77b58;
+  }
+
+  .participation-card__illustration {
+    position: absolute;
+    right: -12px;
+    bottom: -8px;
+    width: 58%;
+    opacity: 0.48;
+  }
+
+  .participation-card__illustration svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    stroke: #b99477;
+    stroke-width: 1.15;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .program-closing {
+    padding: 20px 30px 28px;
+    text-align: center;
+    background: #f2e9de;
+  }
+
+  .program-closing p {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    line-height: 1.3;
+  }
+
+  .program-closing span {
+    display: block;
+    margin-top: 7px;
+    font-size: 18px;
+    color: #aa7b58;
+  }
+
+  @media (max-width: 1100px) {
+    .program-hero__container {
+      width: calc(100% - 80px);
+    }
+
+    .program-years {
+      padding-inline: 36px;
+    }
+
+    .program-years__container {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .program-column,
+    .program-column:first-child,
+    .program-column:last-child {
+      padding: 0;
+      border-right: 0;
+    }
+
+    .program-column:not(:last-child) {
+      padding-bottom: 45px;
+      border-bottom: 1px solid rgba(77, 61, 49, 0.16);
+    }
+
+    .program-topics {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .program-practical {
+      padding-inline: 36px;
+    }
+
+    .program-practical__container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .program-hero {
+      min-height: 700px;
+    }
+
+    .program-hero__image {
+      object-position: 63% center;
+    }
+
+    .program-hero__overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(18, 18, 14, 0.92) 0%,
+          rgba(18, 18, 14, 0.76) 75%,
+          rgba(18, 18, 14, 0.5) 100%
+        );
+    }
+
+    .program-hero__container {
+      width: calc(100% - 40px);
+      min-height: 700px;
+      padding: 10px 0 42px;
+      align-items: flex-start;
+    }
+
+    .program-hero h1 {
+      font-size: 43px;
+    }
+
+    .program-hero__text p {
+      font-size: 17px;
+    }
+
+    .program-years {
+      padding: 38px 20px 48px;
+    }
+
+    .program-topics {
+      grid-template-columns: 1fr;
+    }
+
+    .program-practical {
+      padding: 0 20px 42px;
+    }
+
+    .meeting-steps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .meeting-step {
+      width: auto;
+    }
+
+    .meeting-arrow {
+      display: none;
+    }
+
+    .participation-card {
+      min-height: 450px;
+    }
+
+    .participation-card ul {
+      width: 100%;
+    }
+
+    .participation-card__illustration {
+      width: 75%;
+      opacity: 0.26;
+    }
+
+    .program-closing p {
+      font-size: 24px;
+    }
+  }
+</style>

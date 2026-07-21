@@ -1,0 +1,487 @@
+---
+const participationItems = [
+  "Online uživo",
+  "Snimke svih predavanja",
+  "Materijali nakon svakog susreta",
+  "Praktične vježbe između susreta",
+  "WhatsApp zajednica",
+];
+---
+
+<section class="program-bottom">
+  <div class="program-bottom__inner">
+    <article class="meeting-card">
+      <div class="meeting-card__content">
+        <h2>Kako izgleda jedan susret?</h2>
+
+        <div class="meeting-flow">
+          <div class="meeting-step">
+            <div class="meeting-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="18" />
+                <path d="M24 12v13l8 5" />
+              </svg>
+            </div>
+
+            <p>
+              <strong>20:00</strong>
+              <span>Dolazak</span>
+            </p>
+          </div>
+
+          <span class="meeting-arrow" aria-hidden="true">→</span>
+
+          <div class="meeting-step">
+            <div class="meeting-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="10.5" r="5" />
+                <path d="M19 17c-1.5 4-1.7 7.4-.6 10.2" />
+                <path d="M29 17c1.5 4 1.7 7.4.6 10.2" />
+                <path d="M14 27c3.6 2.4 7 3.6 10 3.6S30.4 29.4 34 27" />
+                <path d="M17 28c-3.4 2-5.6 5.2-6.5 9" />
+                <path d="M31 28c3.4 2 5.6 5.2 6.5 9" />
+                <path d="M10.5 37h27" />
+              </svg>
+            </div>
+
+            <p>
+              <span>Tiha</span>
+              <span>pažnja</span>
+            </p>
+          </div>
+
+          <span class="meeting-arrow" aria-hidden="true">→</span>
+
+          <div class="meeting-step">
+            <div class="meeting-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path
+                  d="M5 10h13c3.4 0 5.5 1.5 6 4.5.5-3 2.6-4.5 6-4.5h13v29H30c-3.4 0-5.5 1.5-6 4.5-.5-3-2.6-4.5-6-4.5H5V10Z"
+                />
+                <path d="M24 14.5V43" />
+                <path d="M9 16h9M9 21h9M9 26h9" />
+                <path d="M30 16h9M30 21h9M30 26h9" />
+              </svg>
+            </div>
+
+            <p>
+              <span>Novo</span>
+              <span>predavanje</span>
+            </p>
+          </div>
+
+          <span class="meeting-arrow" aria-hidden="true">→</span>
+
+          <div class="meeting-step">
+            <div class="meeting-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path
+                  d="M5 12h22a5 5 0 0 1 5 5v9a5 5 0 0 1-5 5H17l-7 6v-6H5a5 5 0 0 1-5-5v-9a5 5 0 0 1 5-5Z"
+                />
+                <path
+                  d="M30 18h11a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5h-3v5l-6-5h-4"
+                />
+              </svg>
+            </div>
+
+            <p>
+              <span>Primjeri iz</span>
+              <span>života</span>
+            </p>
+          </div>
+
+          <span class="meeting-arrow" aria-hidden="true">→</span>
+
+          <div class="meeting-step">
+            <div class="meeting-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="11" r="5" />
+                <circle cx="11.5" cy="16" r="4.2" />
+                <circle cx="36.5" cy="16" r="4.2" />
+                <path d="M15 39c0-7 3.7-11 9-11s9 4 9 11" />
+                <path d="M3 39c0-6 3.2-9.5 8.5-9.5 2.3 0 4.3.7 5.7 2" />
+                <path d="M45 39c0-6-3.2-9.5-8.5-9.5-2.3 0-4.3.7-5.7 2" />
+              </svg>
+            </div>
+
+            <p>
+              <span>Pitanja i</span>
+              <span>dijeljenje</span>
+            </p>
+          </div>
+
+          <span class="meeting-arrow" aria-hidden="true">→</span>
+
+          <div class="meeting-step meeting-step--last">
+            <div class="meeting-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M12 7h27v34H12a4 4 0 0 1-4-4V11a4 4 0 0 1 4-4Z" />
+                <path d="M16 7v34" />
+                <path d="M4 13h8M4 20h8M4 27h8M4 34h8" />
+                <path d="M21 15h12M21 21h12M21 27h9" />
+                <path d="m24 35 10-10 3 3-10 10-5 1 2-4Z" />
+              </svg>
+            </div>
+
+            <p>
+              <span>Praksa za</span>
+              <span>sljedeća dva</span>
+              <span>tjedna</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="meeting-card__image-wrap">
+        <img
+          class="meeting-card__image"
+          src="/images/sections/program-banner.webp"
+          alt="Bilježnica, svijeća i šalica na drvenom stolu"
+        />
+      </div>
+    </article>
+
+    <article class="participation-card">
+      <div class="participation-card__content">
+        <h2>Fleksibilno sudjelovanje</h2>
+
+        <ul>
+          {
+            participationItems.map((item) => (
+              <li>
+                <span class="participation-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="m8 12 2.6 2.6L16 9.5" />
+                  </svg>
+                </span>
+
+                <span>{item}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="participation-illustration" aria-hidden="true">
+        <img
+          src="/images/sections/program-flexible-illustration.webp"
+          alt=""
+        />
+      </div>
+    </article>
+  </div>
+
+  <div class="program-final">
+    <p>Znanje koje se živi. Iskustvo koje postaje život.</p>
+
+    <span aria-hidden="true">
+      <svg viewBox="0 0 34 34">
+        <path
+          d="M17 3c.7 8.1 3.1 12.8 11.5 14C20.1 18.2 17.7 22.9 17 31c-.7-8.1-3.1-12.8-11.5-14C13.9 15.8 16.3 11.1 17 3Z"
+        />
+      </svg>
+    </span>
+  </div>
+</section>
+
+<style>
+  .program-bottom {
+    padding: 0px 60px 0;
+    background: #f7f1e9;
+    color: #2d2926;
+  }
+
+  .program-bottom__inner {
+    width: min(100%, 1332px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.24fr) minmax(0, 1fr);
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .meeting-card,
+  .participation-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(151, 111, 78, 0.25);
+    border-radius: 7px;
+    background: rgba(250, 246, 240, 0.92);
+  }
+
+  .meeting-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .meeting-card__content {
+    padding: 22px 24px 20px;
+  }
+
+  .meeting-card h2,
+  .participation-card h2 {
+    margin: 0 0 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #292521;
+  }
+
+  .meeting-flow {
+    display: grid;
+    grid-template-columns:
+      minmax(54px, 1fr) 16px
+      minmax(54px, 1fr) 16px
+      minmax(54px, 1fr) 16px
+      minmax(54px, 1fr) 16px
+      minmax(54px, 1fr) 16px
+      minmax(92px, 1.3fr);
+    align-items: start;
+    column-gap: 3px;
+    margin-top: 58px;
+  }
+
+  .meeting-step {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .meeting-icon {
+    width: 46px;
+    height: 46px;
+    margin: 0 auto 10px;
+    color: #a77953;
+  }
+
+  .meeting-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .meeting-step p {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 13.5px;
+    line-height: 1.14;
+    color: #302b28;
+  }
+
+  .meeting-step--last p {
+    font-size: 13px;
+  }
+
+  .meeting-step strong,
+  .meeting-step span {
+    display: block;
+    font-weight: 400;
+  }
+
+  .meeting-arrow {
+    margin-top: 15px;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 19px;
+    line-height: 1;
+    color: #a77953;
+  }
+
+  .meeting-card__image-wrap {
+  width: calc(100% + 48px);
+  margin-top: auto;
+  margin-right: -24px;
+  margin-bottom: -8px;
+  margin-left: -24px;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.meeting-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+  .participation-card {
+    position: relative;
+    min-height: 386px;
+  }
+
+  .participation-card__content {
+    position: relative;
+    z-index: 2;
+    padding: 22px 30px;
+  }
+
+  .participation-card ul {
+    width: 58%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .participation-card li {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 19px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #332e2b;
+  }
+
+  .participation-card li:last-child {
+    margin-bottom: 0;
+  }
+
+  .participation-check {
+    flex: 0 0 19px;
+    width: 19px;
+    height: 19px;
+    color: #a77953;
+  }
+
+  .participation-check svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.45;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .participation-illustration {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 74%;
+    height: 84%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .participation-illustration img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+  }
+
+  .program-final {
+    margin: 34px -60px 0;
+    padding: 17px 30px 13px;
+    text-align: center;
+    background: #f0e7dc;
+  }
+
+  .program-final p {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #302b28;
+  }
+
+  .program-final span {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 5px auto 0;
+    color: #a77953;
+  }
+
+  .program-final svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  @media (max-width: 1200px) {
+    .program-bottom {
+      padding-inline: 36px;
+    }
+
+    .program-bottom__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .program-final {
+      margin-inline: -36px;
+    }
+
+    .participation-illustration {
+      width: 58%;
+      height: 78%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .program-bottom {
+      padding: 14px 20px 0;
+    }
+
+    .meeting-card__content,
+    .participation-card__content {
+      padding: 24px 20px;
+    }
+
+    .meeting-flow {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px 14px;
+    }
+
+    .meeting-arrow {
+      display: none;
+    }
+
+    .participation-card {
+      min-height: 440px;
+    }
+
+    .participation-card ul {
+      width: 100%;
+    }
+
+    .participation-illustration {
+      right: -22px;
+      bottom: -4px;
+      width: 96%;
+      height: 68%;
+      opacity: 0.42;
+    }
+
+    .program-final {
+      margin-inline: -20px;
+      padding-inline: 20px;
+    }
+
+    .program-final p {
+      font-size: 24px;
+    }
+  }
+</style>

@@ -1,0 +1,65 @@
+---
+import ContactFormLeft from "./ContactFormLeft.astro";
+import ContactFormDivider from "./ContactFormDivider.astro";
+import ContactFormRight from "./ContactFormRight.astro";
+---
+
+<section class="contact-forms-section" aria-label="Prijava i kontakt">
+  <div class="contact-forms-layout">
+    <ContactFormLeft />
+    <ContactFormDivider />
+    <ContactFormRight />
+  </div>
+</section>
+
+<style>
+  .contact-forms-section,
+  .contact-forms-section *,
+  .contact-forms-section *::before,
+  .contact-forms-section *::after {
+    box-sizing: border-box;
+  }
+
+  .contact-forms-section {
+    position: relative;
+    width: 100%;
+    padding: 46px 32px 58px;
+    overflow: hidden;
+    background: #f7f3ed;
+  }
+
+  .contact-forms-layout {
+    display: grid;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    grid-template-columns:
+      minmax(0, 1fr)
+      72px
+      minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .contact-forms-layout > * {
+    min-width: 0;
+  }
+
+  /*
+   * Manteniamo le due colonne anche su laptop
+   * e finestre non completamente aperte.
+   */
+  @media (max-width: 760px) {
+    .contact-forms-section {
+      padding: 46px 24px 56px;
+    }
+
+    .contact-forms-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .contact-forms-section {
+      padding: 40px 18px 50px;
+    }
+  }
+</style>

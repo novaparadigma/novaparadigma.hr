@@ -1,0 +1,100 @@
+---
+import YearCard from "./YearCard.astro";
+
+const years: Array<{
+  number: string;
+  title: string;
+  paragraphs: string[];
+  bullets?: string[];
+  icon: "eye" | "cycle" | "target";
+}> = [
+  {
+    number: "1",
+    title: "Promatrati",
+    paragraphs: [
+      "Prva godina nije usmjerena na promjenu. Nego na učenje promatranja.",
+      "Kroz praktične vježbe i svakodnevne eksperimente razvija se nova kvaliteta pažnje. Ne da bismo postali bolji. Nego da bismo počeli vidjeti jasnije.",
+    ],
+    bullets: [
+      "Kako nastaje misao.",
+      "Kako nastaje emocija.",
+      "Kako nastaje reakcija.",
+      "Kako nastaju obrasci koje svakodnevno živimo, a da ih često ni ne primjećujemo.",
+    ],
+    icon: "eye",
+  },
+  {
+    number: "2",
+    title: "Transformirati",
+    paragraphs: [
+      "Kada počnemo jasnije vidjeti, prirodno se pojavljuje mogućnost promjene. Ne zato što se prisiljavamo biti drugačiji. Nego zato što više ne hranimo iste obrasce.",
+      "Ovdje se upoznaju alati koji omogućuju svjesniji odnos prema:",
+      "Transformacija više nije cilj. Postaje posljedica.",
+    ],
+    bullets: [
+      "mislima",
+      "emocijama",
+      "simbolima",
+      "snovima",
+      "svakodnevnim događajima",
+    ],
+    icon: "cycle",
+  },
+  {
+    number: "3",
+    title: "Integrirati",
+    paragraphs: [
+      "Treća godina nije završetak. Ona označava trenutak kada ono što smo učili postaje način života.",
+      "Znanje prestaje biti nešto čega se prisjećamo. Postaje način na koji promatramo, biramo i živimo.",
+    ],
+    icon: "target",
+  },
+];
+---
+
+<section class="put-years">
+  <div class="put-years-inner">
+    {years.map((year) => <YearCard {...year} />)}
+  </div>
+</section>
+
+<style>
+  .put-years {
+    padding: 20px 0 34px;
+    background: #f6f1e9;
+  }
+
+  .put-years-inner {
+    width: min(1332px, calc(100% - 136px));
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .put-years-inner :global(.year-card + .year-card) {
+    border-left: 1px solid rgba(80, 66, 54, 0.16);
+  }
+
+  @media (max-width: 900px) {
+    .put-years {
+      padding: 10px 0 30px;
+    }
+
+    .put-years-inner {
+      width: calc(100% - 56px);
+      grid-template-columns: 1fr;
+    }
+
+    .put-years-inner :global(.year-card + .year-card) {
+      border-top: 1px solid rgba(80, 66, 54, 0.16);
+      border-left: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .put-years-inner {
+      width: calc(100% - 40px);
+    }
+  }
+</style>

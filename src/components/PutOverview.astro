@@ -1,0 +1,163 @@
+<section class="put-overview">
+  <div class="put-overview__inner">
+    <div class="put-overview__copy">
+      <p>
+        NOvA nije niz teorijskih predavanja<br />
+        niti skup tehnika koje treba zapamtiti.
+      </p>
+
+      <p>
+        To je proces koji se razvija postupno.<br />
+        Svaka godina otvara drugačiji pogled na iskustvo<br />
+        i gradi temelj za onu koja slijedi.<br />
+        Ne zato što postoji hijerarhija znanja, nego zato<br />
+        što se određene stvari mogu razumjeti tek kada<br />
+        ih počnemo živjeti.
+      </p>
+    </div>
+
+    <div class="put-overview__map" aria-hidden="true">
+      <svg viewBox="0 0 640 250" fill="none">
+        <path
+          class="mountains"
+          d="M26 126
+             C80 111 123 104 170 80
+             C207 60 229 45 263 64
+             C288 78 308 89 335 70
+             C363 50 385 35 417 50
+             C446 64 467 76 496 60
+             C530 41 562 38 610 55"
+        />
+
+        <path
+          class="path"
+          d="M32 169
+             C106 163 160 171 216 184
+             C276 198 313 215 375 214
+             C437 213 477 187 521 159
+             C559 134 586 118 616 106"
+        />
+
+        <path
+          class="path"
+          d="M118 211
+             C170 220 221 220 276 213"
+        />
+
+        <g class="step step--one">
+          <circle cx="190" cy="144" r="35" />
+          <path d="M170 144C181 130 199 130 210 144C199 158 181 158 170 144Z" />
+          <circle cx="190" cy="144" r="7" />
+        </g>
+
+        <g class="step step--two">
+          <circle cx="360" cy="144" r="35" />
+          <path d="M345 135a14 14 0 0 1 24-4" />
+          <path d="M368 128l2 8-8-1" />
+          <path d="M375 153a14 14 0 0 1-24 4" />
+          <path d="M352 160l-2-8 8 1" />
+        </g>
+
+        <g class="step step--three">
+          <circle cx="530" cy="144" r="35" />
+          <circle cx="530" cy="144" r="18" />
+          <circle cx="530" cy="144" r="8" />
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .put-overview {
+    background: #f6f1e9;
+    padding: 48px 0 28px;
+  }
+
+  .put-overview__inner {
+    width: min(1332px, calc(100% - 136px));
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: center;
+    gap: 34px;
+  }
+
+  .put-overview__copy {
+    padding-top: 2px;
+  }
+
+  .put-overview__copy p {
+    margin: 0 0 22px;
+
+    color: #272421;
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.38;
+  }
+
+  .put-overview__map {
+    width: 100%;
+  }
+
+  .put-overview__map svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .mountains,
+  .path,
+  .step circle,
+  .step path {
+    stroke: #b58b68;
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .mountains {
+    opacity: 0.55;
+  }
+
+  .path {
+    opacity: 0.85;
+  }
+
+  .step circle {
+    fill: rgba(246, 241, 233, 0.88);
+  }
+
+  @media (max-width: 900px) {
+    .put-overview {
+      padding: 48px 0 36px;
+    }
+
+    .put-overview__inner {
+      width: calc(100% - 56px);
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .put-overview__map {
+      max-width: 680px;
+      margin-inline: auto;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .put-overview__inner {
+      width: calc(100% - 40px);
+    }
+
+    .put-overview__copy p {
+      font-size: 16px;
+    }
+
+    .put-overview__copy br {
+      display: none;
+    }
+  }
+</style>

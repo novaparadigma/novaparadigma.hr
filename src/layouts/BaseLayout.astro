@@ -1,0 +1,125 @@
+---
+import "../styles/global.css";
+
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+
+import "@fontsource/cormorant-garamond/400.css";
+import "@fontsource/cormorant-garamond/500.css";
+
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = "NOvA – Škola iskustvenog učenja i osobne transformacije",
+  description =
+    "NOvA je suvremena škola iskustvenog učenja, istraživanja svijesti i osobne transformacije kroz pažnju, praksu i neposredno iskustvo.",
+  image = "/images/ui/open-graph.png",
+  noindex = false,
+} = Astro.props;
+
+const siteURL = Astro.site ?? Astro.url.origin;
+
+const canonicalURL = new URL(Astro.url.pathname, siteURL);
+const socialImageURL = new URL(image, siteURL);
+const logoURL = new URL("/images/ui/logo-schema.png", siteURL);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteURL.toString()}#organization`,
+      name: "NOvA",
+      alternateName: "Nova paradigma",
+      url: siteURL.toString(),
+      logo: logoURL.toString(),
+      description:
+        "NOvA je suvremena škola iskustvenog učenja, istraživanja svijesti i osobne transformacije.",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteURL.toString()}#website`,
+      url: siteURL.toString(),
+      name: "NOvA – Nova paradigma",
+      description,
+      inLanguage: "hr",
+      publisher: {
+        "@id": `${siteURL.toString()}#organization`,
+      },
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>{title}</title>
+
+    <meta name="description" content={description} />
+
+    <meta name="theme-color" content="#171411" />
+
+    <link rel="canonical" href={canonicalURL} />
+
+    {
+      noindex && (
+        <meta name="robots" content="noindex, nofollow" />
+      )
+    }
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/ui/favicon-gold.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      href="/images/ui/favicon-gold.png"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="hr_HR" />
+    <meta property="og:site_name" content="NOvA" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <meta
+      property="og:image:alt"
+      content="NOvA – škola iskustvenog učenja i osobne transformacije"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    ></script>
+  </head>
+
+  <body>
+    <slot />
+    <Footer />
+  </body>
+</html>

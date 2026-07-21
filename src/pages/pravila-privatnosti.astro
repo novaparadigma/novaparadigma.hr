@@ -1,0 +1,347 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+---
+
+<BaseLayout
+  title="Pravila privatnosti – NOvA"
+  description="Informacije o prikupljanju, korištenju, pohrani i zaštiti osobnih podataka korisnika NOvA-e."
+>
+  <Header />
+
+  <main>
+    <section class="legal-page">
+      <div class="legal-page__inner">
+        <header class="legal-page__header">
+          <p class="legal-page__eyebrow">NOvA</p>
+
+          <h1>Pravila privatnosti</h1>
+
+          <span class="legal-page__line"></span>
+        </header>
+
+        <div class="legal-page__content">
+          <section class="legal-section">
+            <h2>
+              <span>1.</span>
+              Voditelj obrade podataka
+            </h2>
+
+            <p>
+              Voditelj obrade osobnih podataka je NOvA obrt za usluge /
+              Rozi Slon d.o.o.
+            </p>
+
+            <p>
+              Za sva pitanja možete nam se obratiti putem adresa:
+              <a href="mailto:nova.contatto@gmail.com">
+                nova.contatto@gmail.com
+              </a>
+              ili
+              <a href="mailto:pinkelephant.institute@gmail.com">
+                pinkelephant.institute@gmail.com
+              </a>.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>2.</span>
+              Vrste podataka koje prikupljamo
+            </h2>
+
+            <p>
+              Prikupljamo i obrađujemo samo podatke koji su nužni za rad škole,
+              posebno:
+            </p>
+
+            <ul>
+              <li>ime i prezime;</li>
+              <li>adresu elektroničke pošte i broj telefona;</li>
+              <li>
+                podatke potrebne za izdavanje računa, kada su potrebni za
+                plaćanje;
+              </li>
+              <li>
+                informacije koje polaznik dobrovoljno navede u prijavnim ili
+                kontaktnim obrascima.
+              </li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>3.</span>
+              Svrha obrade podataka
+            </h2>
+
+            <p>Osobni podaci koriste se isključivo za:</p>
+
+            <ul>
+              <li>
+                upravljanje prijavama, plaćanjima i sudjelovanjem u
+                aktivnostima;
+              </li>
+              <li>
+                slanje obavijesti vezanih uz predavanja, događaje i novosti
+                škole;
+              </li>
+              <li>ispunjavanje zakonskih i poreznih obveza.</li>
+            </ul>
+
+            <p>
+              Podaci se ne koriste u marketinške svrhe bez izričitog pristanka
+              korisnika.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>4.</span>
+              Pohrana podataka
+            </h2>
+
+            <p>
+              Osobni podaci čuvaju se samo onoliko dugo koliko je potrebno za
+              pružanje usluga i ispunjenje zakonskih obveza. Nakon isteka tog
+              razdoblja podaci se brišu ili anonimiziraju.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>5.</span>
+              Dijeljenje podataka
+            </h2>
+
+            <p>
+              Osobni podaci ne prosljeđuju se trećim stranama, osim:
+            </p>
+
+            <ul>
+              <li>
+                pružateljima usluga nužnih za rad, primjerice platformama za
+                plaćanje;
+              </li>
+              <li>
+                nadležnim javnim tijelima, isključivo kada je to propisano
+                zakonom.
+              </li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>6.</span>
+              Prava korisnika
+            </h2>
+
+            <p>U svakom trenutku imate pravo:</p>
+
+            <ul>
+              <li>pristupiti svojim osobnim podacima;</li>
+              <li>zahtijevati ispravak ili brisanje podataka;</li>
+              <li>ograničiti obradu ili se usprotiviti obradi;</li>
+              <li>
+                zahtijevati prijenos podataka drugom voditelju obrade, kada je
+                to primjenjivo.
+              </li>
+            </ul>
+
+            <p>
+              Za ostvarivanje svojih prava možete nam se obratiti putem adresa:
+              <a href="mailto:nova.contatto@gmail.com">
+                nova.contatto@gmail.com
+              </a>
+              ili
+              <a href="mailto:pinkelephant.institute@gmail.com">
+                pinkelephant.institute@gmail.com
+              </a>.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>7.</span>
+              Sigurnost
+            </h2>
+
+            <p>
+              Primjenjujemo odgovarajuće tehničke i organizacijske mjere kako
+              bismo zaštitili osobne podatke od neovlaštenog pristupa, gubitka,
+              izmjene ili zlouporabe.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>8.</span>
+              Prihvaćanje
+            </h2>
+
+            <p>
+              Korištenjem naših usluga ili prijavom na aktivnosti potvrđujete
+              da ste pročitali i razumjeli ova Pravila privatnosti.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    background: #f6f1e9;
+    padding: 92px 64px 110px;
+  }
+
+  .legal-page__inner {
+    width: min(100%, 960px);
+    margin: 0 auto;
+  }
+
+  .legal-page__header {
+    margin-bottom: 68px;
+  }
+
+  .legal-page__eyebrow {
+    margin: 0 0 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+    text-transform: none;
+    color: #ad8768;
+  }
+
+  .legal-page h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(34px, 4.2vw, 54px);
+    font-weight: 400;
+    line-height: 1;
+    color: #292521;
+  }
+
+  .legal-page__line {
+    display: block;
+    width: 58px;
+    height: 1px;
+    margin-top: 30px;
+    background: #b38b68;
+  }
+
+  .legal-page__content {
+    max-width: 820px;
+  }
+
+  .legal-section {
+    padding: 0 0 38px;
+    margin-bottom: 38px;
+    border-bottom: 1px solid rgba(41, 37, 33, 0.13);
+  }
+
+  .legal-section:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .legal-section h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin: 0 0 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #292521;
+  }
+
+  .legal-section h2 span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: #ad8768;
+  }
+
+  .legal-section p,
+  .legal-section li {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #403a35;
+  }
+
+  .legal-section p {
+    margin: 0 0 16px;
+  }
+
+  .legal-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .legal-section ul {
+    margin: 0 0 18px;
+    padding-left: 25px;
+  }
+
+  .legal-section li {
+    padding-left: 5px;
+    margin-bottom: 7px;
+  }
+
+  .legal-section li:last-child {
+    margin-bottom: 0;
+  }
+
+  .legal-section li::marker {
+    color: #ad8768;
+  }
+
+  .legal-section a {
+    color: #9e7759;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: color 180ms ease;
+  }
+
+  .legal-section a:hover {
+    color: #6f513d;
+  }
+
+  @media (max-width: 900px) {
+    .legal-page {
+      padding: 72px 36px 90px;
+    }
+
+    .legal-page__header {
+      margin-bottom: 54px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .legal-page {
+      padding: 58px 24px 72px;
+    }
+
+    .legal-page__header {
+      margin-bottom: 46px;
+    }
+
+    .legal-section {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    .legal-section p,
+    .legal-section li {
+      font-size: 20px;
+      line-height: 1.55;
+    }
+  }
+</style>

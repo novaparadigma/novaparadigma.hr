@@ -1,0 +1,481 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo-link" href="/" aria-label="NOvA početna stranica">
+      <img
+        class="logo"
+        src="/images/ui/logo-black.png"
+        alt="NOvA"
+        width="150"
+        height="42"
+      />
+    </a>
+
+    <nav class="desktop-nav" aria-label="Glavna navigacija">
+      <a href="/put-nova">Put NOvA</a>
+      <a href="/program-i-tehnike">Program i tehnike</a>
+      <a href="/raspored-i-cijene">Raspored i cijene</a>
+      <a href="/o-nama">O nama</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/knjige">Knjige</a>
+      <a class="join-button" href="/kontakt">Pridruži se</a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Otvori izbornik"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="menu-toggle__line"></span>
+      <span class="menu-toggle__line"></span>
+      <span class="menu-toggle__line"></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu-backdrop" data-menu-close></div>
+
+  <div
+    class="mobile-menu"
+    id="mobile-menu"
+    aria-hidden="true"
+  >
+    <div class="mobile-menu__top">
+      <a
+        class="mobile-menu__logo-link"
+        href="/"
+        aria-label="NOvA početna stranica"
+      >
+        <img
+          class="mobile-menu__logo"
+          src="/images/ui/logo-black.png"
+          alt="NOvA"
+          width="138"
+          height="39"
+        />
+      </a>
+
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Zatvori izbornik"
+        data-menu-close
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Mobilna navigacija">
+      <a href="/put-nova">Put NOvA</a>
+      <a href="/program-i-tehnike">Program i tehnike</a>
+      <a href="/raspored-i-cijene">Raspored i cijene</a>
+      <a href="/o-nama">O nama</a>
+      <a href="/knjige">Knjige</a>
+      <a href="/kontakt">Kontakt</a>
+
+      <a class="mobile-join-button" href="/kontakt">
+        Pridruži se
+      </a>
+    </nav>
+
+    <div class="mobile-menu__footer">
+      <p>Put prema širem pogledu na život.</p>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector(".site-header");
+  const toggle = header?.querySelector(".menu-toggle");
+  const menu = header?.querySelector(".mobile-menu");
+  const backdrop = header?.querySelector(".mobile-menu-backdrop");
+  const closeButtons = header?.querySelectorAll("[data-menu-close]");
+  const mobileLinks = header?.querySelectorAll(".mobile-nav a");
+
+  const openMenu = () => {
+    if (!header || !toggle || !menu || !backdrop) return;
+
+    header.classList.add("menu-open");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Zatvori izbornik");
+    menu.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("nav-locked");
+  };
+
+  const closeMenu = () => {
+    if (!header || !toggle || !menu) return;
+
+    header.classList.remove("menu-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Otvori izbornik");
+    menu.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("nav-locked");
+  };
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = header?.classList.contains("menu-open");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  closeButtons?.forEach((button) => {
+    button.addEventListener("click", closeMenu);
+  });
+
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1100) {
+      closeMenu();
+    }
+  });
+</script>
+
+<style is:global>
+  html.nav-locked,
+  html.nav-locked body {
+    overflow: hidden;
+  }
+</style>
+
+<style>
+  .site-header,
+  .site-header *,
+  .site-header *::before,
+  .site-header *::after {
+    box-sizing: border-box;
+  }
+
+  .site-header {
+    position: relative;
+    z-index: 100;
+    height: 100px;
+    background: #fbfaf8;
+  }
+
+  .header-inner {
+    width: min(1358px, calc(100% - 120px));
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-link,
+  .mobile-menu__logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo {
+    display: block;
+    width: 150px;
+    height: auto;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(28px, 2.65vw, 43px);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .desktop-nav a {
+    color: inherit;
+    text-decoration: none;
+    transition:
+      color 0.25s ease,
+      background-color 0.25s ease;
+  }
+
+  .desktop-nav a:not(.join-button):hover {
+    color: #a88b73;
+  }
+
+  .join-button {
+    margin-left: 2px;
+    padding: 16px 22px;
+    background: #a9907c;
+    color: #fff !important;
+  }
+
+  .join-button:hover {
+    background: #947b68;
+  }
+
+  .menu-toggle {
+    display: none;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .menu-toggle__line {
+    display: block;
+    width: 27px;
+    height: 1.5px;
+    background: #37322e;
+    transition:
+      transform 0.3s ease,
+      opacity 0.2s ease;
+  }
+
+  .mobile-menu-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 101;
+    visibility: hidden;
+    background: rgba(20, 18, 16, 0.36);
+    opacity: 0;
+    transition:
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 102;
+    display: flex;
+    width: min(430px, 100%);
+    height: 100dvh;
+    padding: 28px 34px 36px;
+    flex-direction: column;
+    overflow-y: auto;
+    background: #f7f1e9;
+    box-shadow: -20px 0 45px rgba(37, 31, 26, 0.16);
+    transform: translateX(105%);
+    visibility: hidden;
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0.4s ease;
+  }
+
+  .mobile-menu__top {
+    display: flex;
+    min-height: 66px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-menu__logo {
+    display: block;
+    width: 138px;
+    height: auto;
+  }
+
+  .mobile-menu__close {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-menu__close span {
+    position: absolute;
+    top: 22px;
+    left: 9px;
+    display: block;
+    width: 28px;
+    height: 1.5px;
+    background: #37322e;
+  }
+
+  .mobile-menu__close span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .mobile-menu__close span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .mobile-nav {
+    display: flex;
+    margin-top: 58px;
+    flex-direction: column;
+  }
+
+  .mobile-nav > a:not(.mobile-join-button) {
+    display: block;
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(136, 108, 84, 0.2);
+    color: #3d3732;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(27px, 7vw, 33px);
+    font-weight: 400;
+    line-height: 1.08;
+    text-decoration: none;
+    transition:
+      color 0.25s ease,
+      padding-left 0.25s ease;
+  }
+
+  .mobile-nav > a:not(.mobile-join-button):hover {
+    padding-left: 6px;
+    color: #9a7253;
+  }
+
+  .mobile-join-button {
+    display: flex;
+    min-height: 58px;
+    margin-top: 34px;
+    padding: 14px 24px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #9c7658;
+    background: #846044;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+      background-color 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .mobile-join-button:hover {
+    border-color: #60432f;
+    background: #60432f;
+  }
+
+  .mobile-menu__footer {
+    margin-top: auto;
+    padding-top: 46px;
+  }
+
+  .mobile-menu__footer::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 1px;
+    margin-bottom: 20px;
+    background: #b38a67;
+  }
+
+  .mobile-menu__footer p {
+    margin: 0;
+    color: #75675b;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  .site-header.menu-open .mobile-menu-backdrop {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .site-header.menu-open .mobile-menu {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 1100px) {
+    .site-header {
+      height: 86px;
+    }
+
+    .header-inner {
+      width: calc(100% - 48px);
+    }
+
+    .logo {
+      width: 138px;
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .site-header {
+      height: 82px;
+    }
+
+    .header-inner {
+      width: calc(100% - 38px);
+    }
+
+    .logo {
+      width: 124px;
+    }
+
+    .menu-toggle {
+      width: 44px;
+      height: 44px;
+    }
+
+    .mobile-menu {
+      width: 100%;
+      padding: 24px 25px 30px;
+    }
+
+    .mobile-menu__logo {
+      width: 124px;
+    }
+
+    .mobile-nav {
+      margin-top: 44px;
+    }
+
+    .mobile-nav > a:not(.mobile-join-button) {
+      padding: 15px 0;
+      font-size: 28px;
+    }
+
+    .mobile-menu__footer {
+      padding-top: 36px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-menu,
+    .mobile-menu-backdrop,
+    .menu-toggle__line,
+    .mobile-nav a {
+      transition: none;
+    }
+  }
+</style>

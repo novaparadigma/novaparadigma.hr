@@ -1,0 +1,590 @@
+<section class="book-payment">
+
+
+  <!-- CITAZIONE SUPERIORE -->
+
+  <div class="book-payment__intro">
+
+    <div class="book-payment__divider">
+
+      <span></span>
+
+      <img
+        src="/images/ui/star-symbol.png"
+        alt=""
+      />
+
+      <span></span>
+
+    </div>
+
+
+    <div class="book-payment__quote-text">
+      "Putovanje između vidljivog i nevidljivog."
+    </div>
+
+
+  </div>
+
+
+
+
+
+  <!-- LIBRO + PAGAMENTO -->
+
+  <div class="book-payment__content">
+
+
+    <div class="book-payment__cover">
+
+      <img
+        src="/images/books/prah-dana-cover.png"
+        alt="Prah dana e-book"
+      />
+
+    </div>
+
+
+
+
+    <div class="book-payment__purchase">
+
+
+      <h2>
+        PRAH DANA
+      </h2>
+
+
+
+      <p class="book-payment__description">
+
+        Roman koji otvara prostor za nova pitanja
+        i dublje razumijevanje sebe i svijeta.
+
+      </p>
+
+
+
+
+      <div class="book-payment__price">
+
+        6,50 €
+
+      </div>
+
+
+
+
+      <p class="book-payment__vat">
+
+        PDV uključen.
+
+      </p>
+
+
+
+
+      <a
+        href="https://buy.stripe.com/7sY8wR9gYcMv1ut5mT8g00a"
+        class="book-payment__button"
+        target="_blank"
+      >
+
+        NASTAVI NA PLAĆANJE
+
+        <span>→</span>
+
+      </a>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+  <!-- CITAZIONE FINALE -->
+
+
+  <div class="book-payment__quote-final">
+
+
+    <div class="book-payment__divider">
+
+      <span></span>
+
+      <img
+        src="/images/ui/star-symbol.png"
+        alt=""
+      />
+
+      <span></span>
+
+    </div>
+
+
+
+    <div class="book-payment__quote-text">
+
+      "Nije to put kojim se ide tražeći odgovore,
+      nego onaj kojim se ide učeći slušati."
+
+    </div>
+
+
+  </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<style>
+
+
+.book-payment {
+
+  background:#f7f1e9;
+
+  padding:20px 30px 80px;
+
+}
+
+
+
+/* CITAZIONI */
+
+.book-payment__intro {
+
+  width:100%;
+
+  text-align:center;
+
+  margin-top:-25px;
+
+  margin-bottom:70px;
+
+}
+
+
+
+.book-payment__quote-final {
+
+  width:100%;
+
+  text-align:center;
+
+  margin-top:105px;
+
+}
+
+
+
+.book-payment__divider {
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:15px;
+
+  margin-bottom:22px;
+
+}
+
+
+
+.book-payment__divider span {
+
+  width:60px;
+
+  height:1px;
+
+  background:#d4bfa8;
+
+}
+
+
+
+.book-payment__divider img {
+
+  width:14px;
+
+  height:auto;
+
+}
+
+
+
+.book-payment__quote-text {
+
+
+  width:100%;
+
+  max-width:700px;
+
+  margin:0 auto;
+
+
+  text-align:center;
+
+
+  font-family:
+  "Cormorant Garamond",
+  serif;
+
+
+  font-style:italic;
+
+
+  font-size:28px;
+
+
+  line-height:1.45;
+
+
+  color:#4c4036;
+
+
+}
+
+
+
+
+
+/* CONTENUTO CENTRALE */
+
+
+.book-payment__content {
+
+  max-width:900px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:70px;
+
+  align-items:center;
+
+}
+
+
+
+
+
+/* COPERTINA */
+
+
+.book-payment__cover {
+
+  display:flex;
+
+  justify-content:center;
+
+  transform:translateY(30px);
+
+}
+
+
+
+.book-payment__cover img {
+
+
+  display:block;
+
+
+  width:100%;
+
+
+  max-width:390px;
+
+
+
+  -webkit-mask-image:linear-gradient(
+
+    to right,
+
+    transparent 0%,
+
+    rgba(0,0,0,.85) 8%,
+
+    #000 18%,
+
+    #000 100%
+
+  );
+
+
+  mask-image:linear-gradient(
+
+    to right,
+
+    transparent 0%,
+
+    rgba(0,0,0,.85) 8%,
+
+    #000 18%,
+
+    #000 100%
+
+  );
+
+
+}
+
+
+
+
+
+
+
+/* PAGAMENTO */
+
+
+.book-payment__purchase {
+
+  text-align:center;
+
+}
+
+
+
+.book-payment__purchase h2 {
+
+
+  margin:0;
+
+
+  font-family:
+  "Cormorant Garamond",
+  serif;
+
+
+  font-size:38px;
+
+
+  font-weight:400;
+
+
+  letter-spacing:.12em;
+
+
+  color:#3d342c;
+
+
+}
+
+
+
+
+
+.book-payment__description {
+
+
+  max-width:360px;
+
+
+  margin:25px auto;
+
+
+  font-size:18px;
+
+
+  line-height:1.5;
+
+
+  color:#625449;
+
+
+}
+
+
+
+
+
+.book-payment__price {
+
+
+  font-family:
+  "Cormorant Garamond",
+  serif;
+
+
+  font-size:62px;
+
+
+  color:#3c3128;
+
+
+}
+
+
+
+
+
+.book-payment__vat {
+
+
+  font-size:14px;
+
+
+  color:#8b7c70;
+
+
+}
+
+
+
+
+
+.book-payment__button {
+
+
+  margin-top:35px;
+
+
+  display:flex;
+
+
+  justify-content:center;
+
+
+  align-items:center;
+
+
+  gap:15px;
+
+
+  padding:16px;
+
+
+  background:#795638;
+
+
+  color:white;
+
+
+  text-decoration:none;
+
+
+  font-size:14px;
+
+
+  letter-spacing:.18em;
+
+
+}
+
+
+
+.book-payment__button:hover {
+
+  background:#5d4029;
+
+}
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+.book-payment {
+
+  padding-inline:20px;
+
+}
+
+
+
+.book-payment__intro {
+
+  margin-top:0;
+
+  margin-bottom:45px;
+
+}
+
+
+
+.book-payment__content {
+
+  grid-template-columns:1fr;
+
+  gap:35px;
+
+}
+
+
+
+.book-payment__cover {
+
+  transform:none;
+
+}
+
+
+
+.book-payment__cover img {
+
+  max-width:320px;
+
+}
+
+
+
+.book-payment__purchase h2 {
+
+  font-size:32px;
+
+}
+
+
+
+.book-payment__price {
+
+  font-size:52px;
+
+}
+
+
+
+.book-payment__quote-text {
+
+  font-size:22px;
+
+}
+
+
+
+.book-payment__quote-final {
+
+  margin-top:70px;
+
+}
+
+
+}
+
+</style>

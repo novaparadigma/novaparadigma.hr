@@ -1,0 +1,169 @@
+<section class="payment-hero">
+
+  <div class="payment-hero__inner">
+
+    <img
+      class="payment-hero__logo"
+      src="/images/ui/logo-black.png"
+      alt="NOvA"
+    />
+
+    <div class="payment-hero__divider" aria-hidden="true">
+      <span></span>
+
+      <img
+        src="/images/ui/star-symbol.png"
+        alt=""
+        class="payment-hero__star"
+      />
+
+      <span></span>
+    </div>
+
+
+    <p class="payment-hero__motto">
+      Put prema širem pogledu na život
+    </p>
+
+
+    <div class="payment-hero__image">
+      <img
+        src="/images/sections/payment-main.webp"
+        alt="Put prema širem pogledu na život"
+      />
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<style>
+
+.payment-hero {
+  background: #f7f1e9;
+  padding: 48px 30px 52px;
+}
+
+
+.payment-hero__inner {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* LOGO */
+
+.payment-hero__logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+
+/* SIMBOLO */
+
+.payment-hero__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 18px 0 20px;
+}
+
+
+.payment-hero__divider span {
+  display: block;
+  width: 38px;
+  height: 1px;
+  background: #a47b55;
+}
+
+
+.payment-hero__star {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+
+
+/* MOTTO */
+
+.payment-hero__motto {
+  margin: 0 0 38px;
+
+  font-family:
+    "Cormorant Garamond",
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 400;
+
+  line-height: 1.35;
+  color: #40372f;
+
+  letter-spacing: 0.01em;
+}
+
+
+
+/* IMMAGINE */
+
+.payment-hero__image {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+
+
+.payment-hero__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width:700px) {
+
+  .payment-hero {
+    padding: 38px 20px 42px;
+  }
+
+
+  .payment-hero__logo {
+    width: 105px;
+  }
+
+
+  .payment-hero__divider {
+    margin: 15px 0 18px;
+  }
+
+
+  .payment-hero__motto {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+
+
+  .payment-hero__image {
+    height: 145px;
+  }
+
+}
+
+</style>

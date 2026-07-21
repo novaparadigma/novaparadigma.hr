@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import PutHero from "../components/PutHero.astro";
+import PutOverview from "../components/PutOverview.astro";
+import PutYears from "../components/PutYears.astro";
+import PutClosing from "../components/PutClosing.astro";
+---
+
+<BaseLayout
+  title="Put NOvA — Nova paradigma"
+  description="Trogodišnji put promatranja, transformacije i integracije."
+>
+
+  <Header />
+  <main>
+    <PutHero />
+    <PutOverview />
+    <PutYears />
+    <PutClosing />
+  </main>
+</BaseLayout>

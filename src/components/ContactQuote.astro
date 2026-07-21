@@ -1,0 +1,190 @@
+<section class="nova-quote-band" aria-label="NOvA poruka">
+  <div
+    class="nova-quote-band__photo"
+    aria-hidden="true"
+    style="background-image: url('/images/sections/contact-banner.webp');"
+  ></div>
+
+  <div class="nova-quote-band__fade" aria-hidden="true"></div>
+
+  <div class="nova-quote-band__inner">
+    <div class="nova-quote-band__content">
+      <div class="nova-quote-band__sentence">
+        Prije svakog puta postoji jedan razgovor.
+      </div>
+
+      <div class="nova-quote-band__line" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .nova-quote-band,
+  .nova-quote-band *,
+  .nova-quote-band *::before,
+  .nova-quote-band *::after {
+    box-sizing: border-box !important;
+  }
+
+  .nova-quote-band {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: 150px !important;
+    min-height: 150px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #f2eee8 !important;
+  }
+
+  /*
+   * Fotografia estesa sotto l’intera fascia.
+   */
+  .nova-quote-band__photo {
+    position: absolute !important;
+    z-index: 1 !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-color: #f2eee8 !important;
+    background-position: left 46% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+
+  /*
+   * Mantiene visibile il paesaggio a sinistra e lo dissolve
+   * gradualmente nel fondo chiaro a destra.
+   */
+  .nova-quote-band__fade {
+    position: absolute !important;
+    z-index: 2 !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+
+    background: linear-gradient(
+      90deg,
+      rgba(242, 238, 232, 0) 0%,
+      rgba(242, 238, 232, 0.03) 23%,
+      rgba(242, 238, 232, 0.13) 37%,
+      rgba(242, 238, 232, 0.48) 51%,
+      rgba(242, 238, 232, 0.82) 64%,
+      rgba(242, 238, 232, 0.97) 78%,
+      #f2eee8 91%
+    ) !important;
+  }
+
+  .nova-quote-band__inner {
+    position: relative !important;
+    z-index: 3 !important;
+    display: flex !important;
+    width: min(1180px, 100%) !important;
+    height: 150px !important;
+    min-height: 150px !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    margin: 0 auto !important;
+    padding: 0 58px !important;
+  }
+
+  .nova-quote-band__content {
+    display: block !important;
+    width: min(430px, 43%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nova-quote-band__sentence {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #302d28 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(18px, 1.55vw, 22px) !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.005em !important;
+    line-height: 1.45 !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+  }
+
+  .nova-quote-band__line {
+    display: block !important;
+    width: 32px !important;
+    height: 1px !important;
+    margin: 13px 0 0 !important;
+    padding: 0 !important;
+    background: #a57445 !important;
+    opacity: 0.8 !important;
+  }
+
+  @media (max-width: 760px) {
+    .nova-quote-band {
+      height: 235px !important;
+      min-height: 235px !important;
+    }
+
+    .nova-quote-band__photo {
+      background-position: 25% center !important;
+    }
+
+    .nova-quote-band__fade {
+      background: linear-gradient(
+        to bottom,
+        rgba(242, 238, 232, 0.02) 0%,
+        rgba(242, 238, 232, 0.08) 35%,
+        rgba(242, 238, 232, 0.57) 62%,
+        rgba(242, 238, 232, 0.92) 81%,
+        #f2eee8 100%
+      ) !important;
+    }
+
+    .nova-quote-band__inner {
+      height: 235px !important;
+      min-height: 235px !important;
+      align-items: flex-end !important;
+      justify-content: flex-start !important;
+      padding: 28px 26px !important;
+    }
+
+    .nova-quote-band__content {
+      width: min(430px, 100%) !important;
+    }
+
+    .nova-quote-band__sentence {
+      font-size: 18px !important;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .nova-quote-band {
+      height: 210px !important;
+      min-height: 210px !important;
+    }
+
+    .nova-quote-band__photo {
+      background-position: 27% center !important;
+    }
+
+    .nova-quote-band__inner {
+      height: 210px !important;
+      min-height: 210px !important;
+      padding: 25px 20px !important;
+    }
+
+    .nova-quote-band__sentence {
+      font-size: 18px !important;
+      line-height: 1.45 !important;
+    }
+  }
+</style>

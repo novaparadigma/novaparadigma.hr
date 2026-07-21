@@ -1,0 +1,152 @@
+<section class="about-hero">
+  <img
+    class="about-hero__image"
+    src="/images/sections/about-main.webp"
+    alt="Stari kovčežić s fotografijom, ključem i knjigama"
+  />
+
+  <div class="about-hero__overlay"></div>
+
+  <div class="about-hero__container">
+    <div class="about-hero__content">
+      <p class="about-hero__eyebrow">O NAMA</p>
+
+      <h1>
+        Neke se stvari<br />
+        mogu naučiti.<br />
+        Neke se mogu<br />
+        samo prenijeti.
+      </h1>
+
+      <span class="about-hero__line"></span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-hero {
+    position: relative;
+    width: 100%;
+    min-height: 570px;
+    overflow: hidden;
+    background: #171411;
+  }
+
+  .about-hero__image {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(12, 12, 11, 0.92) 0%,
+        rgba(12, 12, 11, 0.75) 28%,
+        rgba(12, 12, 11, 0.34) 50%,
+        rgba(12, 12, 11, 0.05) 100%
+      );
+  }
+
+  .about-hero__container {
+    position: relative;
+    z-index: 2;
+    width: min(1332px, calc(100% - 120px));
+    min-height: 570px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-hero__content {
+    width: min(100%, 510px);
+    padding: 60px 0;
+    color: #faf5ed;
+  }
+
+  .about-hero__eyebrow {
+    margin: 0 0 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #b98258;
+  }
+
+  .about-hero h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(46px, 4.6vw, 66px);
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: -0.025em;
+    color: #fffaf3;
+  }
+
+  .about-hero__line {
+    display: block;
+    width: 58px;
+    height: 1px;
+    margin-top: 34px;
+    background: #b88761;
+  }
+
+  @media (max-width: 1100px) {
+    .about-hero__container {
+      width: calc(100% - 72px);
+    }
+  }
+
+  @media (max-width: 700px) {
+    .about-hero {
+      min-height: 650px;
+    }
+
+    .about-hero__image {
+      object-position: 62% center;
+    }
+
+    .about-hero__overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(12, 12, 11, 0.94) 0%,
+          rgba(12, 12, 11, 0.78) 70%,
+          rgba(12, 12, 11, 0.36) 100%
+        );
+    }
+
+    .about-hero__container {
+      width: calc(100% - 40px);
+      min-height: 650px;
+      padding: 10px 0 42px;
+      align-items: flex-start;
+    }
+
+    .about-hero__content {
+      padding: 90px 0 52px;
+    }
+
+    .about-hero__eyebrow {
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+
+    .about-hero h1 {
+      font-size: 44px;
+    }
+
+    .about-hero__line {
+      margin-top: 29px;
+    }
+  }
+</style>

@@ -1,0 +1,235 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+---
+
+<BaseLayout
+  title="Uvjeti i odredbe – NOvA"
+  description="Uvjeti i odredbe sudjelovanja u aktivnostima koje organizira NOvA."
+>
+  <Header />
+
+  <main>
+    <section class="legal-page">
+      <div class="legal-page__inner">
+        <header class="legal-page__header">
+          <p class="legal-page__eyebrow">NOvA</p>
+
+          <h1>Uvjeti i odredbe</h1>
+
+          <span class="legal-page__line"></span>
+        </header>
+
+        <div class="legal-page__content">
+          <section class="legal-section">
+            <h2>
+              <span>1.</span>
+              Područje primjene
+            </h2>
+
+            <p>
+              Ovi uvjeti i odredbe primjenjuju se na sve aktivnosti koje
+              organizira NOvA, uključujući online predavanja, članarine,
+              retreate, radionice i različite tečajeve.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>2.</span>
+              Prijava i plaćanja
+            </h2>
+
+            <p>
+              Sudjelovanje u online predavanjima moguće je putem godišnjeg ili
+              mjesečnog plaćanja.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>3.</span>
+              Otkazivanja i povrat novca
+            </h2>
+
+            <p>
+              Uplaćene kotizacije nisu povratne, osim ako nije drugačije
+              naznačeno za pojedini događaj ili tečaj.
+            </p>
+
+            <p>
+              U iznimnim okolnostima, kao što su ozbiljni zdravstveni razlozi
+              ili druge opravdane situacije, uprava može, prema vlastitom
+              nahođenju, razmotriti pojedinačne slučajeve i ponuditi
+              alternativna rješenja.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>4.</span>
+              Odgovornost
+            </h2>
+
+            <p>
+              Sudjelovanje je dobrovoljno i u potpunosti pod odgovornošću
+              svakog polaznika. Sve relevantne zdravstvene okolnosti moraju
+              biti unaprijed priopćene.
+            </p>
+
+            <p>
+              Organizatori ne snose odgovornost za fizičku, materijalnu ili
+              moralnu štetu nastalu sudjelovanjem u aktivnostima.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>5.</span>
+              Promjene
+            </h2>
+
+            <p>
+              NOvA zadržava pravo izmjene datuma, rasporeda i programa u
+              slučaju organizacijskih potreba ili više sile. Sve promjene bit
+              će pravodobno priopćene polaznicima.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>
+              <span>6.</span>
+              Prihvaćanje
+            </h2>
+
+            <p>
+              Prijavom na bilo koju aktivnost polaznik potvrđuje da je
+              pročitao, razumio i prihvatio ove uvjete i odredbe.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    background: #f6f1e9;
+    padding: 92px 64px 110px;
+  }
+
+  .legal-page__inner {
+    width: min(100%, 960px);
+    margin: 0 auto;
+  }
+
+  .legal-page__header {
+    margin-bottom: 68px;
+  }
+
+  .legal-page__eyebrow {
+    margin: 0 0 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+    text-transform: none;
+    color: #ad8768;
+  }
+
+  .legal-page h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(34px, 4.2vw, 54px);
+    font-weight: 400;
+    line-height: 1;
+    color: #292521;
+  }
+
+  .legal-page__line {
+    display: block;
+    width: 58px;
+    height: 1px;
+    margin-top: 30px;
+    background: #b38b68;
+  }
+
+  .legal-page__content {
+    max-width: 820px;
+  }
+
+  .legal-section {
+    padding: 0 0 38px;
+    margin-bottom: 38px;
+    border-bottom: 1px solid rgba(41, 37, 33, 0.13);
+  }
+
+  .legal-section:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .legal-section h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin: 0 0 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #292521;
+  }
+
+  .legal-section h2 span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: #ad8768;
+  }
+
+  .legal-section p {
+    margin: 0 0 16px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #403a35;
+  }
+
+  .legal-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .legal-page {
+      padding: 72px 36px 90px;
+    }
+
+    .legal-page__header {
+      margin-bottom: 54px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .legal-page {
+      padding: 58px 24px 72px;
+    }
+
+    .legal-page__header {
+      margin-bottom: 46px;
+    }
+
+    .legal-section {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    .legal-section p {
+      font-size: 20px;
+      line-height: 1.55;
+    }
+  }
+</style>

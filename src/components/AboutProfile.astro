@@ -1,0 +1,310 @@
+<section class="about-profile">
+  <div class="about-profile__inner">
+    <div class="about-profile__divider"></div>
+
+    <div class="about-profile__grid">
+      <div class="about-profile__image">
+        <img
+          src="/images/sections/about-marco.webp"
+          alt="Marco Bianco piše za stolom"
+        />
+      </div>
+
+      <article class="about-profile__content">
+        <h2>Marco Bianco</h2>
+
+        <p class="about-profile__eyebrow">
+          Prijenos, praksa i suvremeni oblik škole NOvA.
+        </p>
+
+        <span class="about-profile__line"></span>
+
+        <div class="about-profile__text">
+          <p>
+            Više od četrdeset godina istražujem putove svijesti,
+            percepcije i unutarnje transformacije kroz iskustvo,
+            praksu i izravni prijenos znanja.
+          </p>
+
+          <p>
+            NOvA je suvremeni oblik tog puta: škola za one koji žele
+            učiti kroz vlastito iskustvo, a ne samo kroz ideje.
+          </p>
+        </div>
+
+        <img
+          class="about-profile__signature"
+          src="/images/ui/firma-marco.png"
+          alt="Potpis Marco Bianco"
+        />
+      </article>
+    </div>
+  </div>
+
+  <div class="about-profile__closing">
+    <p>Znanje koje se živi. Iskustvo koje postaje život.</p>
+
+    <span class="about-profile__star" aria-hidden="true">
+      <svg viewBox="0 0 34 34">
+        <path
+          d="M17 3c.7 8.1 3.1 12.8 11.5 14C20.1 18.2 17.7 22.9 17 31c-.7-8.1-3.1-12.8-11.5-14C13.9 15.8 16.3 11.1 17 3Z"
+        />
+      </svg>
+    </span>
+  </div>
+</section>
+
+<style>
+  .about-profile {
+    background: #f7f1e9;
+    color: #302a26;
+  }
+
+  .about-profile__inner {
+    width: min(100%, 1332px);
+    margin: 0 auto;
+    padding: 0 60px 40px;
+  }
+
+  .about-profile__divider {
+    height: 1px;
+    margin-bottom: 30px;
+    background: rgba(151, 111, 78, 0.24);
+  }
+
+  .about-profile__grid {
+    display: grid;
+    grid-template-columns: minmax(420px, 1.05fr) minmax(420px, 0.95fr);
+    gap: 62px;
+    align-items: center;
+  }
+
+  .about-profile__image {
+    min-width: 0;
+    min-height: 390px;
+    overflow: hidden;
+    background: #c9b49f;
+  }
+
+  .about-profile__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about-profile__content {
+    padding: 18px 36px 16px 0;
+  }
+
+  .about-profile__content h2 {
+    margin: 0 0 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.08;
+    color: #2e2925;
+  }
+
+  .about-profile__eyebrow {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: #a06f4d;
+  }
+
+  .about-profile__line {
+    display: block;
+    width: 54px;
+    height: 1px;
+    margin: 22px 0 21px;
+    background: #aa7954;
+  }
+
+  .about-profile__text {
+    max-width: 520px;
+  }
+
+  .about-profile__text p {
+    margin: 0 0 16px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.48;
+    color: #3b342f;
+  }
+
+  .about-profile__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-profile__signature {
+    display: block;
+    width: min(100%, 290px);
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .about-profile__closing {
+    position: relative;
+    overflow: hidden;
+    padding: 23px 30px 14px;
+    text-align: center;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(244, 237, 229, 0.97),
+        rgba(236, 226, 215, 0.97)
+      );
+  }
+
+  .about-profile__closing::before,
+  .about-profile__closing::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -12px;
+    left: 0;
+    height: 58px;
+    opacity: 0.36;
+    background-repeat: repeat-x;
+    background-size: 420px 58px;
+    pointer-events: none;
+  }
+
+  .about-profile__closing::before {
+    background-image:
+      linear-gradient(
+        165deg,
+        transparent 0 18%,
+        rgba(172, 148, 126, 0.16) 19% 31%,
+        transparent 32% 100%
+      );
+  }
+
+  .about-profile__closing::after {
+    bottom: -23px;
+    opacity: 0.22;
+    background-image:
+      linear-gradient(
+        15deg,
+        transparent 0 20%,
+        rgba(151, 127, 106, 0.18) 21% 34%,
+        transparent 35% 100%
+      );
+  }
+
+  .about-profile__closing p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #3b342f;
+  }
+
+  .about-profile__star {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin: 10px auto 0;
+    color: #a77953;
+  }
+
+  .about-profile__star svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  @media (max-width: 1100px) {
+    .about-profile__inner {
+      padding-inline: 36px;
+    }
+
+    .about-profile__grid {
+      grid-template-columns: 1fr;
+      gap: 34px;
+    }
+
+    .about-profile__content {
+      padding-right: 0;
+    }
+
+    .about-profile__image,
+    .about-profile__image img {
+      min-height: 500px;
+    }
+  }
+
+  @media (max-width: 700px) {
+  .about-profile__inner {
+    padding: 0 20px 30px;
+  }
+
+  .about-profile__divider {
+    margin-bottom: 22px;
+  }
+
+  .about-profile__grid {
+    gap: 22px;
+  }
+
+  .about-profile__content {
+    order: 1;
+    padding-top: 0;
+  }
+
+  .about-profile__image {
+    order: 2;
+  }
+
+  .about-profile__image,
+  .about-profile__image img {
+    min-height: 360px;
+  }
+
+  .about-profile__content h2 {
+    font-size: 33px;
+  }
+
+    .about-profile__eyebrow {
+      font-size: 11px;
+    }
+
+    .about-profile__text p {
+      font-size: 17px;
+    }
+
+    .about-profile__signature {
+      width: 235px;
+      margin-top: 18px;
+    }
+
+    .about-profile__closing {
+      padding: 18px 18px 11px;
+    }
+
+    .about-profile__closing p {
+      font-size: 14px;
+      letter-spacing: 0.11em;
+    }
+  }
+</style>

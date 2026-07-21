@@ -1,0 +1,252 @@
+<section class="book-banner" aria-label="Knjiga Prah dana">
+
+  <div class="book-banner__content">
+
+    <p class="book-banner__quote">
+      Nekad je dovoljan jedan susret da se sve promijeni.<br />
+      Nekad je dovoljna jedna knjiga.
+    </p>
+
+    <div class="book-banner__line" aria-hidden="true"></div>
+
+    <a href="/placanje-knjiga" class="book-banner__button">
+
+      <span class="book-banner__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 5h2l2 10h9l2-7H7"/>
+          <circle cx="10" cy="19" r="1.4"/>
+          <circle cx="17" cy="19" r="1.4"/>
+        </svg>
+      </span>
+
+      <span>KUPI KNJIGU</span>
+
+    </a>
+
+    <p class="book-banner__note">
+      Dostupno u e-book izdanju.
+    </p>
+
+  </div>
+
+</section>
+
+
+<style>
+
+.book-banner,
+.book-banner *,
+.book-banner *::before,
+.book-banner *::after {
+  box-sizing:border-box !important;
+}
+
+
+.book-banner {
+
+  position:relative !important;
+
+  width:100% !important;
+  height:250px !important;
+
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+
+  overflow:hidden !important;
+
+  background-image:
+    linear-gradient(
+      rgba(20,18,15,.28),
+      rgba(20,18,15,.45)
+    ),
+    url("/images/sections/book-banner.webp") !important;
+
+  background-size:cover !important;
+  background-position:center center !important;
+
+}
+
+
+.book-banner__content {
+
+  position:relative !important;
+
+  margin-top:-12px !important;
+
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+
+  text-align:center !important;
+
+}
+
+
+.book-banner__quote {
+
+  margin:0 !important;
+
+  color:#f5efe7 !important;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size:
+    clamp(18px,1.5vw,23px) !important;
+
+  font-weight:400 !important;
+
+  line-height:1.45 !important;
+
+  letter-spacing:-0.01em !important;
+
+}
+
+
+.book-banner__line {
+
+  width:28px !important;
+
+  height:1px !important;
+
+  margin:15px 0 16px !important;
+
+  background:#eee4d8 !important;
+
+  opacity:.85 !important;
+
+}
+
+
+.book-banner__button {
+
+  height:48px !important;
+
+  min-width:220px !important;
+
+  padding:0 28px !important;
+
+  display:flex !important;
+
+  align-items:center !important;
+  justify-content:center !important;
+
+  gap:11px !important;
+
+
+  background:#745a44 !important;
+
+  color:#f8f2ea !important;
+
+  border:1px solid rgba(255,255,255,.12) !important;
+  
+
+
+  text-decoration:none !important;
+
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+
+  font-size:14px !important;
+
+  letter-spacing:.1em !important;
+
+
+  transition:
+    background .25s ease,
+    transform .25s ease !important;
+
+}
+
+
+.book-banner__button:hover {
+
+  background:#302a25 !important;
+
+  transform:translateY(-1px) !important;
+
+}
+
+
+.book-banner__icon {
+
+  display:flex !important;
+
+  width:17px !important;
+
+  height:17px !important;
+
+}
+
+
+.book-banner__icon svg {
+
+  width:17px !important;
+
+  height:17px !important;
+
+  fill:none !important;
+
+  stroke:currentColor !important;
+
+  stroke-width:1.7 !important;
+
+  stroke-linecap:round !important;
+
+  stroke-linejoin:round !important;
+
+}
+
+
+.book-banner__note {
+
+  margin:13px 0 0 !important;
+
+  color:#eee5db !important;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size:13px !important;
+
+  letter-spacing:.01em !important;
+
+}
+
+
+@media(max-width:760px){
+
+  .book-banner {
+
+    height:260px !important;
+
+  }
+
+
+  .book-banner__quote {
+
+    font-size:18px !important;
+
+    padding:0 20px !important;
+
+  }
+
+
+  .book-banner__button {
+
+    min-width:200px !important;
+
+  }
+
+}
+
+</style>

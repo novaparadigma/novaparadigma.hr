@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PaymentHero from "../components/PaymentHero.astro";
+import PaymentOptions from "../components/PaymentOptions.astro";
+import StripeInfo from "../components/StripeInfo.astro";
+---
+
+<BaseLayout title="Plaćanje škole NOvA">
+
+  <PaymentHero />
+
+  <main>
+    <PaymentOptions />
+    <StripeInfo />
+  </main>
+
+</BaseLayout>

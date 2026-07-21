@@ -1,0 +1,213 @@
+<div class="nova-divider" aria-hidden="true">
+  <span class="nova-divider__line"></span>
+
+  <span class="nova-divider__symbol">
+  <svg
+    viewBox="0 0 80 80"
+    role="presentation"
+    focusable="false"
+    aria-hidden="true"
+  >
+    <circle
+      class="nova-divider__compass-circle"
+      cx="40"
+      cy="40"
+      r="36"
+    />
+
+    <circle
+      class="nova-divider__compass-inner"
+      cx="40"
+      cy="40"
+      r="4"
+    />
+
+    <!-- Četiri glavna kraka -->
+    <path
+      class="nova-divider__compass-main"
+      d="
+        M40 11
+        L45 34
+        L40 40
+        L35 34
+        Z
+
+        M69 40
+        L46 45
+        L40 40
+        L46 35
+        Z
+
+        M40 69
+        L35 46
+        L40 40
+        L45 46
+        Z
+
+        M11 40
+        L34 35
+        L40 40
+        L34 45
+        Z
+      "
+    />
+
+    <!-- Četiri kraka između -->
+    <path
+      class="nova-divider__compass-secondary"
+      d="
+        M59 21
+        L47 36
+        L40 40
+        L44 33
+        Z
+
+        M59 59
+        L44 47
+        L40 40
+        L47 44
+        Z
+
+        M21 59
+        L33 44
+        L40 40
+        L36 47
+        Z
+
+        M21 21
+        L36 33
+        L40 40
+        L33 36
+        Z
+      "
+    />
+
+    <!-- Oznake smjera -->
+    <path
+      class="nova-divider__compass-tick"
+      d="
+        M40 4V8
+        M76 40H72
+        M40 76V72
+        M4 40H8
+      "
+    />
+  </svg>
+</span>
+
+  <span class="nova-divider__line"></span>
+</div>
+
+<style>
+  .nova-divider,
+  .nova-divider *,
+  .nova-divider *::before,
+  .nova-divider *::after {
+    box-sizing: border-box;
+  }
+
+  .nova-divider {
+    display: grid;
+    width: 72px;
+    min-height: 100%;
+    grid-template-rows: 1fr auto 1fr;
+    justify-items: center;
+    gap: 13px;
+    padding: 0;
+  }
+
+  .nova-divider__line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    min-height: 80px;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(164, 116, 69, 0),
+        rgba(164, 116, 69, 0.38),
+        rgba(164, 116, 69, 0.38),
+        rgba(164, 116, 69, 0)
+      );
+  }
+
+  .nova-divider__symbol {
+  display: block;
+  width: 68px;
+  height: 68px;
+  color: #a47445;
+}
+
+.nova-divider__symbol svg {
+  display: block !important;
+  width: 68px !important;
+  height: 68px !important;
+  max-width: 68px !important;
+  max-height: 68px !important;
+  overflow: visible;
+  fill: none !important;
+}
+
+.nova-divider__compass-circle {
+  fill: rgba(255, 255, 255, 0.15) !important;
+  stroke: currentColor !important;
+  stroke-width: 1.1;
+  opacity: 0.75;
+}
+
+.nova-divider__compass-inner {
+  fill: #f7f3ed !important;
+  stroke: currentColor !important;
+  stroke-width: 1.2;
+}
+
+.nova-divider__compass-main {
+  fill: rgba(164, 116, 69, 0.06) !important;
+  stroke: currentColor !important;
+  stroke-width: 1.45;
+  stroke-linejoin: round;
+}
+
+.nova-divider__compass-secondary {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.05;
+  stroke-linejoin: round;
+}
+
+.nova-divider__compass-tick {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1;
+  stroke-linecap: round;
+  opacity: 0.75;
+}
+  @media (max-width: 980px) {
+    .nova-divider {
+      display: grid;
+      width: 100%;
+      min-height: auto;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 14px;
+      margin: 48px 0;
+    }
+
+    .nova-divider__line {
+      @media (max-width: 980px) {
+        display: none;
+  }
+}
+  }
+
+  @media (max-width: 640px) {
+  .nova-divider__symbol,
+  .nova-divider__symbol svg {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+  }
+}
+</style>

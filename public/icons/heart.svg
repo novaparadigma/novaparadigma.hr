@@ -1,0 +1,22 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  fill="none"
+  aria-hidden="true"
+>
+  <path
+    d="M32 50
+       C30 48 27.5 46.2 24.8 44
+       C17.2 38.2 12 33.6 12 25.8
+       C12 19.8 16.6 15 22.5 15
+       C26.4 15 29.8 16.9 32 20
+       C34.2 16.9 37.6 15 41.5 15
+       C47.4 15 52 19.8 52 25.8
+       C52 33.6 46.8 38.2 39.2 44
+       C36.5 46.2 34 48 32 50Z"
+    stroke="currentColor"
+    stroke-width="1.55"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

@@ -1,0 +1,248 @@
+<section class="nova-info-bar" aria-label="Kontakt informacije">
+  <div class="nova-info-bar__inner">
+    <!-- E-MAIL -->
+    <div class="nova-info-bar__item">
+      <span class="nova-info-bar__icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 48 48"
+          role="presentation"
+          focusable="false"
+        >
+          <rect
+            x="6"
+            y="10"
+            width="36"
+            height="27"
+            rx="2"
+          ></rect>
+
+          <path d="M8 13L24 26L40 13"></path>
+        </svg>
+      </span>
+
+      <a href="mailto:nova.paradigma@yahoo.com">
+        nova.paradigma@yahoo.com
+      </a>
+    </div>
+
+    <span class="nova-info-bar__divider" aria-hidden="true"></span>
+
+    <!-- VRIJEME ODGOVORA -->
+    <div class="nova-info-bar__item">
+      <span class="nova-info-bar__icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 48 48"
+          role="presentation"
+          focusable="false"
+        >
+          <circle cx="24" cy="24" r="17"></circle>
+          <path d="M24 14V25L31 30"></path>
+        </svg>
+      </span>
+
+      <p>Odgovaramo u roku od 48 sati.</p>
+    </div>
+
+    <span class="nova-info-bar__divider" aria-hidden="true"></span>
+
+    <!-- ZAVRŠNA PORUKA -->
+    <div class="nova-info-bar__item">
+      <span class="nova-info-bar__icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 48 48"
+          role="presentation"
+          focusable="false"
+        >
+          <path
+            d="
+              M24 39
+              C20 34 9 27 9 18
+              C9 12 13 8 18 8
+              C21 8 23 10 24 13
+              C26 10 28 8 32 8
+              C37 8 40 12 40 18
+              C40 27 29 34 24 39
+              Z
+            "
+          ></path>
+        </svg>
+      </span>
+
+      <p>Hvala što istražuješ put svjesnosti.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .nova-info-bar,
+  .nova-info-bar *,
+  .nova-info-bar *::before,
+  .nova-info-bar *::after {
+    box-sizing: border-box;
+  }
+
+  .nova-info-bar {
+    width: 100%;
+    padding: 25px 32px;
+    border-top: 1px solid rgba(150, 105, 61, 0.16);
+    border-bottom: 1px solid rgba(150, 105, 61, 0.14);
+    background: #f7f3ed;
+  }
+
+  .nova-info-bar__inner {
+    display: grid;
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    grid-template-columns:
+      minmax(0, 1fr)
+      1px
+      minmax(0, 1fr)
+      1px
+      minmax(0, 1.35fr);
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nova-info-bar__item {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nova-info-bar__item p,
+  .nova-info-bar__item a {
+    margin: 0;
+    color: #3d3933;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  .nova-info-bar__item a {
+    transition: color 180ms ease;
+  }
+
+  .nova-info-bar__item a:hover {
+    color: #956337;
+  }
+
+  .nova-info-bar__item a:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid #a57445;
+    outline-offset: 4px;
+  }
+
+  .nova-info-bar__icon {
+    display: flex;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    align-items: center;
+    justify-content: center;
+    color: #a06d3e;
+  }
+
+  .nova-info-bar__icon svg {
+    display: block !important;
+    width: 32px !important;
+    height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+    overflow: visible;
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 1.45 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+  }
+
+  .nova-info-bar__icon svg path,
+  .nova-info-bar__icon svg circle,
+  .nova-info-bar__icon svg rect {
+    fill: none !important;
+    stroke: currentColor !important;
+  }
+
+  .nova-info-bar__divider {
+    display: block;
+    width: 1px;
+    height: 26px;
+    background: rgba(150, 105, 61, 0.46);
+  }
+
+  @media (max-width: 900px) {
+    .nova-info-bar__inner {
+      gap: 20px;
+    }
+
+    .nova-info-bar__item p,
+    .nova-info-bar__item a {
+      font-size: 14px;
+    }
+
+    .nova-info-bar__icon {
+      width: 30px;
+      height: 30px;
+      flex-basis: 30px;
+    }
+
+    .nova-info-bar__icon svg {
+      width: 28px !important;
+      height: 28px !important;
+      max-width: 28px !important;
+      max-height: 28px !important;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .nova-info-bar {
+      padding: 15px 24px;
+    }
+
+    .nova-info-bar__inner {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .nova-info-bar__item {
+      justify-content: flex-start;
+      padding: 17px 0;
+    }
+
+    .nova-info-bar__divider {
+      width: 100%;
+      height: 1px;
+      background:
+        linear-gradient(
+          to right,
+          transparent,
+          rgba(150, 105, 61, 0.32),
+          transparent
+        );
+    }
+
+    .nova-info-bar__item p,
+    .nova-info-bar__item a {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .nova-info-bar {
+      padding-right: 18px;
+      padding-left: 18px;
+    }
+
+    .nova-info-bar__item {
+      gap: 13px;
+    }
+
+    .nova-info-bar__item a {
+      overflow-wrap: anywhere;
+    }
+  }
+</style>

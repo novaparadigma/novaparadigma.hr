@@ -1,0 +1,51 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 70 56"
+  fill="none"
+  aria-hidden="true"
+>
+  <path
+    d="M35 0.5V10.5"
+    stroke="currentColor"
+    stroke-width="1.45"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M10.5 10.5L19 18"
+    stroke="currentColor"
+    stroke-width="1.45"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M59.5 10.5L51 18"
+    stroke="currentColor"
+    stroke-width="1.45"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M0.5 34H17
+       A18 18 0 0 1 53 34
+       H69.5"
+    stroke="currentColor"
+    stroke-width="1.45"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M14 43H49"
+    stroke="currentColor"
+    stroke-width="1.45"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M31 54H69.5"
+    stroke="currentColor"
+    stroke-width="1.45"
+    stroke-linecap="round"
+  />
+</svg>

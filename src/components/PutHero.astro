@@ -1,0 +1,140 @@
+<section class="put-hero">
+  <div class="put-hero__shade" aria-hidden="true"></div>
+
+  <div class="put-hero__inner">
+    <div class="put-hero__content">
+      <p class="put-hero__eyebrow">Put NOvA</p>
+
+      <h1>
+        Tri godine.<br />
+        Jedan put.<br />
+        Bez prečaca.
+      </h1>
+
+      <span class="put-hero__line" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .put-hero {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+
+    background-image: url("/images/sections/put-main.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 52%;
+  }
+
+  .put-hero__shade {
+    position: absolute;
+    inset: 0;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(17, 18, 18, 0.72) 0%,
+        rgba(17, 18, 18, 0.48) 27%,
+        rgba(17, 18, 18, 0.12) 54%,
+        rgba(17, 18, 18, 0) 75%
+      );
+  }
+
+  .put-hero__inner {
+    position: relative;
+    z-index: 1;
+
+    width: min(1332px, calc(100% - 136px));
+    height: 100%;
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .put-hero__content {
+    transform: translateY(8px);
+  }
+
+  .put-hero__eyebrow {
+    margin: 0 0 22px;
+
+    color: #c49772;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+  }
+
+  .put-hero__line {
+    display: block;
+    width: 52px;
+    height: 1px;
+    margin-top: 27px;
+
+    background: rgba(202, 154, 116, 0.9);
+  }
+
+  @media (max-width: 900px) {
+    .put-hero {
+      height: 500px;
+      background-position: 62% center;
+    }
+
+    .put-hero__inner {
+      width: calc(100% - 56px);
+    }
+
+    h1 {
+      font-size: clamp(48px, 7vw, 58px);
+    }
+  }
+
+  @media (max-width: 700px) {
+  .put-hero {
+    height: 560px;
+    background-position: right center;
+  }
+
+  .put-hero__shade {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(17, 18, 18, 0.78) 0%,
+        rgba(17, 18, 18, 0.48) 60%,
+        rgba(17, 18, 18, 0.12) 100%
+      );
+  }
+
+  .put-hero__inner {
+    width: calc(100% - 40px);
+    align-items: flex-start;
+    padding-top: 92px;
+    padding-bottom: 0;
+  }
+
+  .put-hero__content {
+    transform: none;
+  }
+
+  h1 {
+    font-size: clamp(46px, 13vw, 56px);
+  }
+}
+</style>

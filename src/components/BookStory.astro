@@ -1,0 +1,325 @@
+<section class="book-story" aria-labelledby="book-story-title">
+  <div class="book-story__inner">
+
+    <div class="book-story__content">
+
+      <h2 id="book-story-title">
+        Priča iza priče
+      </h2>
+
+      <div class="book-story__line" aria-hidden="true"></div>
+
+
+      <p class="book-story__intro">
+        <em>Prah dana</em> nastajao je tijekom mnogo godina.
+      </p>
+
+
+      <p>
+        Ono što se pojavljuje u knjizi doista se dogodilo.
+        Gradovi postoje. Putovanja su stvarna. A stvarni su
+        i ljudi koji su na tom putu ostavili dubok trag.
+      </p>
+
+
+      <img
+        class="book-story__symbols"
+        src="/images/sections/book-symbols.webp"
+        alt="Gérard, Gabriel i Adrien"
+      />
+
+
+      <p>
+        Njihova se imena pojavljuju i u romanu, ali nisu ondje
+        kako bi bila objašnjena. Poput mnogih susreta u životu,
+        njihovo se značenje otkriva polako.
+      </p>
+
+
+      <p>
+        Književna forma postala je način da se ispriča ono
+        što je teško prenijeti izravno: kako jedan susret,
+        jedan pogled ili jedna naizgled beznačajna rečenica
+        mogu postupno promijeniti način na koji gledamo svijet.
+      </p>
+
+
+      <p class="book-story__closing">
+        Neke se priče mogu ispričati tek kad prođe
+        dovoljno vremena. Možda je i ova morala
+        čekati svoj trenutak.
+      </p>
+
+
+    </div>
+
+
+    <div class="book-story__image">
+
+      <img
+        src="/images/sections/book-postcards.webp"
+        alt="Fotografije Pariza, Milana i Marrakesha"
+        loading="lazy"
+      />
+
+    </div>
+
+
+  </div>
+</section>
+
+
+<style>
+
+.book-story,
+.book-story *,
+.book-story *::before,
+.book-story *::after {
+  box-sizing:border-box !important;
+}
+
+
+.book-story {
+
+  width:100% !important;
+
+  padding:35px 32px 40px !important;
+
+  background:#f6f2ec !important;
+
+}
+
+
+
+.book-story__inner {
+
+  width:min(1180px,100%) !important;
+
+  margin:0 auto !important;
+
+  display:grid !important;
+
+  grid-template-columns:
+    minmax(320px,0.75fr)
+    minmax(430px,1fr) !important;
+
+  gap:55px !important;
+
+  align-items:center !important;
+
+}
+
+
+
+/* TESTO */
+
+.book-story__content {
+
+  min-width:0 !important;
+
+}
+
+
+.book-story h2 {
+
+  margin:0 !important;
+
+  color:#2c2924 !important;
+
+  font-family:Georgia,"Times New Roman",serif !important;
+
+  font-size:clamp(32px,3vw,42px) !important;
+
+  font-weight:400 !important;
+
+  line-height:1.1 !important;
+
+  letter-spacing:-0.02em !important;
+
+}
+
+
+
+.book-story__line {
+
+  width:32px !important;
+
+  height:1px !important;
+
+  margin:14px 0 16px !important;
+
+  background:#b27b45 !important;
+
+}
+
+
+
+.book-story p {
+
+  margin:0 0 18px !important;
+
+  color:#3e3933 !important;
+
+  font-family:Georgia,"Times New Roman",serif !important;
+
+  font-size:15px !important;
+
+  line-height:1.5 !important;
+
+}
+
+
+
+.book-story__intro {
+
+  margin-bottom:20px !important;
+
+}
+
+
+
+.book-story__symbols {
+  width: 105% !important;
+  margin: 24px 0 28px -12px !important;
+  padding: 0 !important;
+  
+}
+
+.book-story__symbols img {
+  display: block !important;
+  width: 105% !important;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+
+.book-story__closing {
+
+  margin-top:22px !important;
+
+  margin-bottom:0 !important;
+
+  color:#956035 !important;
+
+  font-size:17px !important;
+
+  line-height:1.5 !important;
+
+}
+
+
+
+
+
+/* CARTOLINA */
+
+.book-story__image {
+
+  display:flex !important;
+
+  align-items:center !important;
+
+  justify-content:center !important;
+
+}
+
+
+
+.book-story__image img {
+
+  display:block !important;
+
+  width:430px !important;
+
+  height:430px !important;
+
+  object-fit:cover !important;
+
+  background:white !important;
+
+  padding:14px !important;
+
+  border:1px solid rgba(120,90,60,.22) !important;
+
+  box-shadow:
+    0 18px 35px rgba(0,0,0,.16) !important;
+
+  transform:rotate(2.8deg) !important;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+  .book-story {
+
+    padding:50px 24px !important;
+
+  }
+
+
+  .book-story__inner {
+
+    grid-template-columns:1fr !important;
+
+    gap:40px !important;
+
+  }
+
+
+  .book-story__image img {
+
+    width:min(430px,100%) !important;
+
+    height:auto !important;
+
+    aspect-ratio:1/1 !important;
+
+  }
+
+}
+
+
+
+@media(max-width:520px){
+
+
+  .book-story {
+
+    padding:40px 18px !important;
+
+  }
+
+
+  .book-story h2 {
+
+    font-size:34px !important;
+
+  }
+
+
+  .book-story p {
+
+    font-size:15px !important;
+
+  }
+
+
+ @media (max-width: 520px) {
+  .book-story__symbols {
+    margin: 32px 0 !important;
+  }
+
+  .book-story__symbols img {
+    width: 115% !important;
+    max-width: none !important;
+    margin-left: -7.5% !important;
+  }
+}
+
+}
+
+</style>

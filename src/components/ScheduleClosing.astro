@@ -1,0 +1,201 @@
+<section class="schedule-closing">
+  <div class="schedule-closing__inner">
+    <div class="schedule-closing__grid">
+      <div class="schedule-closing__image">
+        <img
+          src="/images/sections/raspored-banner.webp"
+          alt="Šumska staza obasjana sunčevom svjetlošću"
+        />
+      </div>
+
+      <blockquote class="schedule-closing__quote">
+    
+
+        <p>
+          Odluka da uložiš u sebe<br />
+          nije trošak.<br />
+          To je početak puta<br />
+          koji mijenja način na koji živiš.
+        </p>
+
+        <span class="schedule-closing__quote-line"></span>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="schedule-closing__final">
+    <p>Znanje koje se živi. Iskustvo koje postaje život.</p>
+
+    <span class="schedule-closing__star" aria-hidden="true">
+      <svg viewBox="0 0 34 34">
+        <path
+          d="M17 3c.7 8.1 3.1 12.8 11.5 14C20.1 18.2 17.7 22.9 17 31c-.7-8.1-3.1-12.8-11.5-14C13.9 15.8 16.3 11.1 17 3Z"
+        />
+      </svg>
+    </span>
+  </div>
+</section>
+
+<style>
+  .schedule-closing {
+    background: #f7f1e9;
+    color: #2e2925;
+  }
+
+  .schedule-closing__inner {
+    padding: 28px 60px 22px;
+  }
+
+  .schedule-closing__grid {
+    width: min(100%, 1332px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.58fr) minmax(300px, 0.92fr);
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .schedule-closing__image,
+  .schedule-closing__quote {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .schedule-closing__image {
+    min-height: 190px;
+    background: #29231d;
+  }
+
+  .schedule-closing__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 190px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .schedule-closing__quote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 190px;
+    margin: 0;
+    padding: 26px 44px 25px 72px;
+    border: 1px solid rgba(151, 111, 78, 0.11);
+    background:
+      linear-gradient(
+        135deg,
+        rgba(239, 228, 217, 0.82),
+        rgba(249, 244, 238, 0.96)
+      );
+  }
+
+
+  .schedule-closing__quote p {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #302a26;
+  }
+
+  .schedule-closing__quote-line {
+    display: block;
+    width: 45px;
+    height: 1px;
+    margin-top: 17px;
+    background: #a77953;
+  }
+
+  .schedule-closing__final {
+    padding: 18px 30px 13px;
+    text-align: center;
+    background: #f0e7dc;
+  }
+
+  .schedule-closing__final p {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #3a332e;
+  }
+
+  .schedule-closing__star {
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin: 9px auto 0;
+    color: #a77953;
+  }
+
+  .schedule-closing__star svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  @media (max-width: 1000px) {
+    .schedule-closing__inner {
+      padding-inline: 36px;
+    }
+
+    .schedule-closing__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .schedule-closing__image,
+    .schedule-closing__image img {
+      min-height: 230px;
+    }
+
+    .schedule-closing__quote {
+      min-height: 180px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .schedule-closing__inner {
+      padding: 22px 20px 18px;
+    }
+
+    .schedule-closing__grid {
+      gap: 14px;
+    }
+
+    .schedule-closing__image,
+    .schedule-closing__image img {
+      min-height: 175px;
+    }
+
+    .schedule-closing__quote {
+      min-height: 175px;
+      padding: 25px 24px 24px 58px;
+    }
+
+    .schedule-closing__quote p {
+      font-size: 21px;
+    }
+
+    .schedule-closing__final {
+      padding: 16px 18px 11px;
+    }
+
+    .schedule-closing__final p {
+      font-size: 15px;
+      letter-spacing: 0.11em;
+    }
+  }
+</style>

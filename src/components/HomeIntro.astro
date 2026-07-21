@@ -1,0 +1,179 @@
+<section class="home-intro">
+  <div class="home-copy">
+    <div class="home-copy-inner">
+      <img
+        class="home-logo"
+        src="/images/ui/logo-gold.png"
+        alt="NOvA"
+      />
+
+      <p>
+        Nije riječ o bijegu od stvarnosti,<br />
+        već o tome da je živimo punije.<br />
+        S više svijesti, slobode i smisla.
+      </p>
+
+      <span class="home-line" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <a href="/put-nova" class="home-image">
+    <img
+      src="/images/sections/hero-forest.webp"
+      alt="Sunčeva svjetlost među stablima"
+    />
+
+    <div class="overlay" aria-hidden="true"></div>
+
+    <div class="cta">
+      <span>Saznaj više o Putu NOvA</span>
+      <div class="cta-line" aria-hidden="true"></div>
+    </div>
+  </a>
+</section>
+
+<style>
+  .home-intro {
+    width: 100%;
+    height: 180px;
+
+    display: grid;
+    grid-template-columns: 37% 63%;
+
+    background: #f4efe8;
+  }
+
+  .home-copy {
+    display: flex;
+    align-items: center;
+  }
+
+  .home-copy-inner {
+    padding: 20px 42px 18px 70px;
+  }
+
+  .home-logo {
+    width: 95px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .home-copy p {
+    margin: 0;
+
+    color: #2c2926;
+    font-family: var(--font-serif);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.28;
+  }
+
+  .home-line {
+    display: block;
+
+    width: 38px;
+    height: 1px;
+    margin-top: 10px;
+
+    background: #b18d6d;
+  }
+
+  .home-image {
+    position: relative;
+
+    display: block;
+    height: 180px;
+
+    overflow: hidden;
+    background: #111;
+  }
+
+  .home-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+  }
+
+  .cta {
+    position: absolute;
+    z-index: 2;
+
+    top: 50%;
+    right: 58px;
+
+    transform: translateY(-50%);
+
+    color: #fff;
+  }
+
+  .cta span {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .cta-line {
+    width: 38px;
+    height: 1px;
+    margin-top: 12px;
+
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+  @media (max-width: 900px) {
+    .home-intro {
+      height: auto;
+      grid-template-columns: 1fr;
+    }
+
+    .home-copy-inner {
+      padding: 38px 28px;
+    }
+
+    .home-image {
+      height: 260px;
+    }
+
+    .cta {
+      right: 28px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .home-logo {
+      width: 92px;
+    }
+
+    .home-copy p {
+      font-size: 15px;
+    }
+
+    .home-image {
+      height: 230px;
+    }
+
+    .cta {
+      left: 24px;
+      right: auto;
+    }
+
+    .cta span {
+      font-size: 12px;
+    }
+  }
+</style>

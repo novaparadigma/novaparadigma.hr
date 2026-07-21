@@ -1,0 +1,443 @@
+<section class="payment-options">
+
+  <div class="payment-options__header">
+
+    <img
+      src="/images/ui/leaf-symbol.png"
+      alt=""
+      class="payment-options__leaf"
+    />
+
+    <h1>
+      UPIS U ŠKOLU
+    </h1>
+
+    <p>
+      1. godina programa
+    </p>
+
+    <div class="payment-options__line"></div>
+
+  </div>
+
+
+
+  <div class="payment-options__cards">
+
+
+    <!-- PAGAMENTO UNICO -->
+
+    <article class="payment-card">
+
+      <div class="payment-card__icon">
+        <img
+          src="/images/ui/user.png"
+          alt=""
+        />
+      </div>
+
+
+      <h2>
+        JEDNOKRATNO<br />
+        PLAĆANJE
+      </h2>
+
+
+      <div class="payment-card__divider"></div>
+
+
+      <div class="payment-card__price">
+        850 €
+      </div>
+
+
+      <p class="payment-card__description">
+        Cijela godina<br />
+        u jednoj uplati.
+      </p>
+
+
+      <a
+        href="https://buy.stripe.com/dRm14pcta27Rddb3eL8g005"
+        class="payment-card__button"
+        target="_blank"
+        rel="noopener"
+      >
+        NASTAVI NA PLAĆANJE
+        <span>→</span>
+      </a>
+
+
+    </article>
+
+
+
+
+    <!-- RATE -->
+
+    <article class="payment-card">
+
+
+      <div class="payment-card__icon">
+        <img
+          src="/images/ui/calendar.png"
+          alt=""
+        />
+      </div>
+
+
+      <h2>
+        PLAĆANJE U<br />
+        RATAMA
+      </h2>
+
+
+      <div class="payment-card__divider"></div>
+
+
+      <div class="payment-card__price">
+        10 × 99 €
+      </div>
+
+
+      <p class="payment-card__description">
+        Mjesečne rate.
+        <br />
+        <span>
+          Ukupno 990 €
+        </span>
+      </p>
+
+
+      <a
+        href="https://buy.stripe.com/dRm28tfFm7sba0ZaHd8g00b"
+        class="payment-card__button"
+        target="_blank"
+        rel="noopener"
+      >
+        NASTAVI NA PLAĆANJE
+        <span>→</span>
+      </a>
+
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<style>
+
+.payment-options {
+
+  background:#f7f1e9;
+
+  padding:0px 30px 50px;
+
+}
+
+
+
+.payment-options__header {
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  text-align:center;
+
+  margin-bottom:38px;
+
+}
+
+
+
+.payment-options__leaf {
+
+  width:58px;
+
+  height:auto;
+
+  margin-bottom:18px;
+
+}
+
+
+
+.payment-options__header h1 {
+
+  margin:0;
+
+  font-family:
+  "Cormorant Garamond",
+  serif;
+
+  font-size:38px;
+
+  font-weight:400;
+
+  letter-spacing:.08em;
+
+  color:#3d342c;
+
+}
+
+
+
+.payment-options__header p {
+
+  margin:8px 0 0;
+
+  font-family:
+  "Cormorant Garamond",
+  serif;
+
+  font-size:24px;
+
+  color:#59493b;
+
+}
+
+
+
+.payment-options__line {
+
+  width:70px;
+
+  height:1px;
+
+  background:#b38a62;
+
+  margin:18px auto 0;
+
+}
+
+
+
+
+.payment-options__cards {
+
+  width:min(100%,780px);
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:24px;
+
+}
+
+
+
+
+
+.payment-card {
+
+  border:1px solid #dfcdbb;
+
+  background:rgba(255,255,255,.18);
+
+  padding:32px 22px 26px;
+
+  text-align:center;
+
+}
+
+
+
+
+
+.payment-card__icon {
+
+  width:58px;
+
+  height:58px;
+
+  border:1px solid #b38a62;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin:0 auto 22px;
+
+}
+
+
+
+.payment-card__icon img {
+
+  width:30px;
+
+  height:30px;
+
+  object-fit:contain;
+
+}
+
+
+
+
+
+.payment-card h2 {
+
+  margin:0;
+
+  font-family:
+  "Cormorant Garamond",
+  serif;
+
+  font-size:22px;
+
+  letter-spacing:.18em;
+
+  line-height:1.35;
+
+  color:#4b3d31;
+
+}
+
+
+
+
+
+.payment-card__divider {
+
+  width:120px;
+
+  height:1px;
+
+  background:#dfcdbb;
+
+  margin:22px auto;
+
+}
+
+
+
+
+
+.payment-card__price {
+
+  font-family:
+  "Cormorant Garamond",
+  serif;
+
+  font-size:55px;
+
+  color:#3c3128;
+
+}
+
+
+
+
+
+.payment-card__description {
+
+  font-size:17px;
+
+  line-height:1.5;
+
+  color:#655448;
+
+  margin:12px 0 30px;
+
+}
+
+
+
+.payment-card__description span {
+
+  font-size:14px;
+
+  color:#8d8177;
+
+}
+
+
+
+
+
+.payment-card__button {
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:14px;
+
+  background:#795638;
+
+  color:white;
+
+  text-decoration:none;
+
+  padding:15px 15px;
+
+  font-size:14px;
+
+  letter-spacing:.18em;
+
+  transition:.25s ease;
+
+}
+
+
+
+.payment-card__button:hover {
+
+  background:#5d4029;
+
+}
+
+
+
+
+@media(max-width:700px){
+
+
+  .payment-options {
+
+    padding-inline:20px;
+
+  }
+
+
+  .payment-options__header h1 {
+
+    font-size:32px;
+
+  }
+
+
+  .payment-options__cards {
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .payment-card__price {
+
+    font-size:48px;
+
+  }
+
+
+}
+
+</style>
