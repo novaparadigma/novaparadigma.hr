@@ -77,6 +77,22 @@ const structuredData = {
 
     <link rel="canonical" href={canonicalURL} />
 
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: "NOvA",
+    url: "https://novaparadigma.hr",
+    logo: "https://novaparadigma.hr/images/ui/logo-gold.png",
+    description: "Škola iskustvenog učenja i osobne transformacije.",
+    sameAs: [
+      "https://www.instagram.com/nova.paradigma/",
+      "https://www.facebook.com/profile.php?id=61577053837758"
+    ]
+  })}
+/>
+
     {
       noindex && (
         <meta name="robots" content="noindex, nofollow" />
