@@ -235,25 +235,42 @@
   }
 
   @media (max-width: 1100px) {
-    .about-profile__inner {
-      padding-inline: 36px;
-    }
-
-    .about-profile__grid {
-      grid-template-columns: 1fr;
-      gap: 34px;
-    }
-
-    .about-profile__content {
-      padding-right: 0;
-    }
-
-    .about-profile__image,
-    .about-profile__image img {
-      min-height: 500px;
-    }
+  .about-profile__inner {
+    padding-inline: 36px;
   }
 
+  .about-profile__grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .about-profile__content {
+    order: 1;
+    padding: 0;
+    text-align: center;
+  }
+
+  .about-profile__text {
+    margin-inline: auto;
+  }
+
+  .about-profile__line {
+    margin: 22px auto 21px;
+  }
+
+  .about-profile__signature {
+    margin-inline: auto;
+  }
+
+  .about-profile__image {
+    order: 2;
+  }
+
+  .about-profile__image,
+  .about-profile__image img {
+    min-height: 500px;
+  }
+}
   @media (max-width: 700px) {
   .about-profile__inner {
     padding: 0 20px 30px;
@@ -267,13 +284,19 @@
     gap: 22px;
   }
 
-  .about-profile__content {
-    order: 1;
-    padding-top: 0;
+  
+
+  .about-profile__text {
+    margin-inline: 0;
   }
 
-  .about-profile__image {
-    order: 2;
+  .about-story__line {
+  margin: 22px auto;
+}
+
+  .about-profile__signature {
+    width: 235px;
+    margin: 18px auto;
   }
 
   .about-profile__image,
@@ -285,26 +308,21 @@
     font-size: 33px;
   }
 
-    .about-profile__eyebrow {
-      font-size: 11px;
-    }
-
-    .about-profile__text p {
-      font-size: 17px;
-    }
-
-    .about-profile__signature {
-      width: 235px;
-      margin-top: 18px;
-    }
-
-    .about-profile__closing {
-      padding: 18px 18px 11px;
-    }
-
-    .about-profile__closing p {
-      font-size: 14px;
-      letter-spacing: 0.11em;
-    }
+  .about-profile__eyebrow {
+    font-size: 11px;
   }
+
+  .about-profile__text p {
+    font-size: 17px;
+  }
+
+  .about-profile__closing {
+    padding: 18px 18px 11px;
+  }
+
+  .about-profile__closing p {
+    font-size: 14px;
+    letter-spacing: 0.11em;
+  }
+}
 </style>

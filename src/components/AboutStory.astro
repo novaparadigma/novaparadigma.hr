@@ -1,50 +1,76 @@
 <section class="about-story">
   <div class="about-story__inner">
     <div class="about-story__text">
+      <h2><strong>O podrijetlu znanja</strong></h2>
+
       <p>
+        
+        
+      </p>
+
+      <p>
+        
         Ovo nije priča o tome kako je nastala jedna škola.
       </p>
 
       <p>
-        To je priča o znanju koje se stoljećima prenosilo<br />
+        To je priča o znanju koje se stoljećima prenosilo
         od čovjeka do čovjeka, kroz odnos, iskustvo i život.
       </p>
 
       <p>
-        Prije više od četrdeset godina život me doveo <br />
-        do ljudi koji su mi prenijeli znanje koje se nije <br />
+        Prije više od četrdeset godina život me doveo
+        do ljudi koji su mi prenijeli znanje koje se nije
         moglo naučiti iz knjiga.
       </p>
 
       <p>
-        Auguste, Madame Aurore i Gérard bili su posljednja <br />
-        generacija od koje sam mogao učiti izravno.
+        Imao sam rijetku priliku učiti od dviju generacija
+        učitelja iste tradicije.
       </p>
 
       <p>
-        Kasnije su Adrien i Gabriel postali moji učitelji <br />
-        i prijatelji, nastavljajući prenositi isto znanje <br />
-        na suvremen način.
+        Auguste, Aurore i Gérard pripadali su starijoj
+        generaciji učitelja koji su cijeli svoj život
+        posvetili očuvanju i prenošenju toga znanja.
       </p>
 
       <p>
-        Godinama nisam pokušavao naučiti njihove odgovore. <br />
-        Učio sam promatrati, provjeravati i živjeti ono što <br />
+        Adrien i Gabriel pripadali su sljedećoj generaciji. Nastavili su prenositi bit tradicije        suvremenim jezikom, ostajući vjerni onome što su
+        i sami primili.
+      </p>
+
+      <p>
+        O susretu s tim učiteljima i putu koji me doveo do njih
+        pisao sam u svojoj prvoj knjizi, 
+        <a href="/knjige"><strong> Prah dana</strong></a>.
+      </p>
+
+      <p>
+        Godinama nisam pokušavao naučiti njihove odgovore.
+      </p>
+
+      <p>
+        Učio sam promatrati, provjeravati i živjeti ono što
         su mi pokazivali.
       </p>
 
       <p>
-        Danas, nakon više od četrdeset godina osobnog <br />
-        iskustva, istraživanja i prakse, to znanje <br />
-        živi kroz školu <strong>NOvA</strong>.
+        Danas, nakon više od četrdeset godina osobnog iskustva,
+        istraživanja i prakse, to znanje živi kroz školu
+        <strong> NOvA</strong>.
       </p>
 
       <p>
-        Ne kao skup ideja. <br />
-        Nego kao iskustvo koje svatko može provjeriti <br />
+        Ne kao skup ideja.
+      </p>
+
+      <p>
+        Kao iskustvo koje svatko može provjeriti
         vlastitim životom.
       </p>
     </div>
+  
 
     <div class="about-story__image">
       <img
@@ -55,9 +81,11 @@
   </div>
 </section>
 
+
+
 <style>
   .about-story {
-    padding: 58px 60px 34px;
+    padding: 52px 60px 34px;
     background: #f7f1e9;
     color: #302a26;
   }
@@ -68,11 +96,21 @@
     display: grid;
     grid-template-columns: minmax(360px, 0.9fr) minmax(520px, 1.35fr);
     gap: 72px;
-    align-items: stretch;
+    align-items: center;
   }
 
   .about-story__text {
-    padding: 8px 0 6px 24px;
+    padding: 0 0 6px 24px;
+  }
+
+  .about-story__text h2 {
+    margin: 0 0 28px;
+    transform: translateY(-6px);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #9b6c49;
   }
 
   .about-story__text p {
@@ -93,28 +131,28 @@
     color: #9b6c49;
   }
 
+  .about-story__text a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .about-story__text a:hover strong {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
   .about-story__image {
-  transform: translateY(-18px);
-  min-width: 0;
-  height: auto;
-  align-self: start;
-  margin-top: 8px;
-  background: transparent;
-}
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.about-story__image img {
-  display: block;
-  width: 82%;
-  height: auto;
-  margin: 0 auto;
-  object-fit: contain;
-  
+ .about-story__image img {
+  width: 95%;
+  max-height: auto;
+  max-width: 550px;
 }
-
-.about-story__inner {
-  align-items: start;
-}
-
   @media (max-width: 1100px) {
   .about-story {
     padding-inline: 36px;
@@ -122,49 +160,70 @@
 
   .about-story__inner {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 32px;
+    align-items: start;
   }
 
   .about-story__text {
-    padding-left: 0;
-  }
+  padding-left: 0;
+  text-align: center;
+}
+
+.about-story__text h2 {
+  text-align: center;
+}
+
+.about-story__text p {
+  text-align: center;
+}
 
   .about-story__image {
-    display: none;
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+    justify-content: center;
+  }
+
+  .about-story__image img {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    margin: 0 auto;
   }
 }
 
-  @media (max-width: 700px) {
-    .about-story {
-      padding: 42px 20px 28px;
-    }
-
-    .about-story__inner {
-      gap: 30px;
-    }
-
-    .about-story__text p {
-      margin-bottom: 20px;
-      font-size: 17px;
-    }
-
-    .about-story__text br {
-      display: none;
-    }
-
-    .about-story__image {
-      min-height: 0;
-      width: 100%;
-      margin-top: 10px;
-      background: transparent;
-    }
-    
-    .about-story__image img {
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
-      object-fit: contain;
-      
-    }
+@media (max-width: 700px) {
+  .about-story {
+    padding: 42px 20px 28px;
   }
+
+  .about-story__inner {
+    gap: 26px;
+  }
+
+  .about-story__text h2 {
+    margin-bottom: 24px;
+    transform: none;
+    font-size: 28px;
+  }
+
+  .about-story__text p {
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+
+  .about-story__text br {
+    display: none;
+  }
+
+  .about-story__image {
+    margin-top: 4px;
+  }
+
+  .about-story__image img {
+    width: 100%;
+    max-width: none;
+  }
+}
 </style>
