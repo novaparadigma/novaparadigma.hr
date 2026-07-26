@@ -8,7 +8,7 @@
       <h1>
         Tri godine.<br />
         Jedan put.<br />
-        Korak po korak.
+        <span class="put-hero__last-line">Korak po korak.</span>
       </h1>
 
       <span class="put-hero__line" aria-hidden="true"></span>
@@ -76,7 +76,7 @@
 
     color: #fff;
     font-family: var(--font-serif);
-    font-size: 58px;
+    font-size: 55px;
     font-weight: 500;
     line-height: 0.98;
     letter-spacing: -0.025em;
@@ -91,6 +91,12 @@
     background: rgba(202, 154, 116, 0.9);
   }
 
+  .put-hero__last-line {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 52px;
+}
+
   @media (max-width: 900px) {
     .put-hero {
       height: 500px;
@@ -104,6 +110,10 @@
     h1 {
       font-size: clamp(48px, 7vw, 58px);
     }
+    .put-hero__last-line {
+    margin-top: 4px;
+    font-size: 0.90em;
+  }
   }
 
   @media (max-width: 700px) {
@@ -136,5 +146,6 @@
   h1 {
     font-size: clamp(46px, 13vw, 56px);
   }
+  
 }
 </style>
