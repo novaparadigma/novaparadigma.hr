@@ -1,6 +1,7 @@
 ---
 const enrollmentOpen = true;
 ---
+
 <section class="schedule-top">
   <section class="schedule-hero">
     <img
@@ -24,40 +25,40 @@ const enrollmentOpen = true;
         <span class="schedule-hero__line"></span>
 
         {
-  enrollmentOpen ? (
-    <a
-      class="schedule-hero__note schedule-hero__note--link"
-      href="/kontakt"
-      aria-label="Pridružite se programu NOvA"
-    >
-      <span class="schedule-hero__leaf" aria-hidden="true">
-        <svg viewBox="0 0 46 46">
-          <path d="M17 42c3.3-12.7 8.3-23.5 17-35" />
-          <path d="M22 30c-5.2.2-8.7-2.1-10.5-6.8 5.3-.3 8.8 2 10.5 6.8Z" />
-          <path d="M27 22c.3-5.1 3-8.4 8-9.8-.2 5.1-2.9 8.3-8 9.8Z" />
-          <path d="M18 37c-4.4.1-7.3-1.8-8.7-5.8 4.4-.1 7.3 1.8 8.7 5.8Z" />
-          <path d="M31 15c.2-4.1 2.3-6.8 6.2-8-.1 4.1-2.2 6.8-6.2 8Z" />
-        </svg>
-      </span>
+          enrollmentOpen ? (
+            <a
+              class="schedule-hero__note schedule-hero__note--link"
+              href="/kontakt"
+              aria-label="Pridružite se programu NOvA"
+            >
+              <span class="schedule-hero__leaf" aria-hidden="true">
+                <svg viewBox="0 0 46 46">
+                  <path d="M17 42c3.3-12.7 8.3-23.5 17-35" />
+                  <path d="M22 30c-5.2.2-8.7-2.1-10.5-6.8 5.3-.3 8.8 2 10.5 6.8Z" />
+                  <path d="M27 22c.3-5.1 3-8.4 8-9.8-.2 5.1-2.9 8.3-8 9.8Z" />
+                  <path d="M18 37c-4.4.1-7.3-1.8-8.7-5.8 4.4-.1 7.3 1.8 8.7 5.8Z" />
+                  <path d="M31 15c.2-4.1 2.3-6.8 6.2-8-.1 4.1-2.2 6.8-6.2 8Z" />
+                </svg>
+              </span>
 
-      <p>Upisi u tijeku.</p>
-    </a>
-  ) : (
-    <div class="schedule-hero__note">
-      <span class="schedule-hero__leaf" aria-hidden="true">
-        <svg viewBox="0 0 46 46">
-          <path d="M17 42c3.3-12.7 8.3-23.5 17-35" />
-          <path d="M22 30c-5.2.2-8.7-2.1-10.5-6.8 5.3-.3 8.8 2 10.5 6.8Z" />
-          <path d="M27 22c.3-5.1 3-8.4 8-9.8-.2 5.1-2.9 8.3-8 9.8Z" />
-          <path d="M18 37c-4.4.1-7.3-1.8-9.2-5.9 4.7-.2 7.7 1.8 9.2 5.9Z" />
-          <path d="M31 15c.2-4.1 2.3-6.8 6.2-8-.1 4.1-2.2 6.8-6.2 8Z" />
-        </svg>
-      </span>
+              <p>Upisi u tijeku.</p>
+            </a>
+          ) : (
+            <div class="schedule-hero__note">
+              <span class="schedule-hero__leaf" aria-hidden="true">
+                <svg viewBox="0 0 46 46">
+                  <path d="M17 42c3.3-12.7 8.3-23.5 17-35" />
+                  <path d="M22 30c-5.2.2-8.7-2.1-10.5-6.8 5.3-.3 8.8 2 10.5 6.8Z" />
+                  <path d="M27 22c.3-5.1 3-8.4 8-9.8-.2 5.1-2.9 8.3-8 9.8Z" />
+                  <path d="M18 37c-4.4.1-7.3-1.8-9.2-5.9 4.7-.2 7.7 1.8 9.2 5.9Z" />
+                  <path d="M31 15c.2-4.1 2.3-6.8 6.2-8-.1 4.1-2.2 6.8-6.2 8Z" />
+                </svg>
+              </span>
 
-      <p>Prvi korak počinje odlukom.</p>
-    </div>
-  )
-}
+              <p>Prvi korak počinje odlukom.</p>
+            </div>
+          )
+        }
       </div>
     </div>
   </section>
@@ -92,8 +93,8 @@ const enrollmentOpen = true;
             <h3>1. godina</h3>
 
             <p>
-              Nastava počinje <strong>15.10.2026.</strong><br />
-              i traje do <strong>10.06.2027.</strong>
+              Nastava počinje<br />
+              <strong>11.11.2026.</strong>
             </p>
           </div>
         </article>
@@ -112,8 +113,8 @@ const enrollmentOpen = true;
             <h3>2. godina</h3>
 
             <p>
-              Nastava počinje <strong>14.10.2026.</strong><br />
-              i traje do <strong>09.06.2027.</strong>
+              Nastava počinje<br />
+              <strong>13.10.2026.</strong>
             </p>
           </div>
         </article>
@@ -129,10 +130,19 @@ const enrollmentOpen = true;
           <div class="schedule-date__content">
             <h3>Predavanja</h3>
 
-            <p>
-              Dva puta mjesečno <br />
-              srijedom ili četvrtkom<br />
-              od <strong>20:00 do 22:00.</strong>
+            <p class="schedule-date__frequency">
+              <strong>18 online susreta</strong><br />
+              dva puta mjesečno putem Zooma.
+            </p>
+
+            <p class="schedule-date__year-time">
+              <span>1. godina</span><br />
+              srijedom od <strong>20:00 do 22:00</strong>
+            </p>
+
+            <p class="schedule-date__year-time">
+              <span>2. godina</span><br />
+              utorkom od <strong>20:30 do 22:30</strong>
             </p>
           </div>
         </article>
@@ -203,11 +213,11 @@ const enrollmentOpen = true;
   .schedule-hero__container {
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
     width: min(1332px, calc(100% - 120px));
     min-height: 565px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
   }
 
   .schedule-hero__content {
@@ -260,17 +270,17 @@ const enrollmentOpen = true;
   }
 
   .schedule-hero__note--link {
-  width: fit-content;
-  text-decoration: none;
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease;
-}
+    width: fit-content;
+    text-decoration: none;
+    transition:
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
 
-.schedule-hero__note--link:hover {
-  color: #e0b58e;
-  transform: translateX(4px);
-}
+  .schedule-hero__note--link:hover {
+    color: #e0b58e;
+    transform: translateX(4px);
+  }
 
   .schedule-hero__leaf {
     display: block;
@@ -347,7 +357,7 @@ const enrollmentOpen = true;
     grid-template-columns: 92px minmax(0, 1fr);
     gap: 22px;
     align-items: center;
-    min-height: 126px;
+    min-height: 165px;
     padding: 0 34px;
     border-right: 1px solid rgba(114, 85, 62, 0.17);
   }
@@ -406,6 +416,38 @@ const enrollmentOpen = true;
     color: #8d603f;
   }
 
+  .schedule-date--time {
+    align-items: flex-start;
+  }
+
+  .schedule-date--time .schedule-date__icon {
+    margin-top: 21px;
+  }
+
+  .schedule-date--time .schedule-date__content {
+    padding-top: 7px;
+  }
+
+  .schedule-date__frequency {
+    margin-bottom: 13px !important;
+  }
+
+  .schedule-date__year-time {
+    margin-top: 9px !important;
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+  }
+
+  .schedule-date__year-time span {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #292521;
+  }
+
   /* STRUKTURA PROGRAMA */
 
   .schedule-structure {
@@ -455,8 +497,8 @@ const enrollmentOpen = true;
   }
 
   .schedule-structure__content p {
-    margin: 0 0 14px;
     max-width: 770px;
+    margin: 0 0 14px;
     font-family: "Cormorant Garamond", serif;
     font-size: 19px;
     line-height: 1.48;
@@ -484,6 +526,7 @@ const enrollmentOpen = true;
     .schedule-date,
     .schedule-date:first-child,
     .schedule-date:last-child {
+      min-height: auto;
       padding: 0 0 28px;
       border-right: 0;
       border-bottom: 1px solid rgba(114, 85, 62, 0.17);
@@ -491,6 +534,18 @@ const enrollmentOpen = true;
 
     .schedule-date:last-child {
       border-bottom: 0;
+    }
+
+    .schedule-date--time {
+      align-items: center;
+    }
+
+    .schedule-date--time .schedule-date__icon {
+      margin-top: 0;
+    }
+
+    .schedule-date--time .schedule-date__content {
+      padding-top: 0;
     }
 
     .schedule-structure {
@@ -525,10 +580,10 @@ const enrollmentOpen = true;
     }
 
     .schedule-hero__container {
+      align-items: flex-start;
       width: calc(100% - 40px);
       min-height: 660px;
       padding: 10px 0 42px;
-      align-items: flex-start;
     }
 
     .schedule-hero__content {
@@ -572,6 +627,10 @@ const enrollmentOpen = true;
 
     .schedule-date__content p {
       font-size: 17px;
+    }
+
+    .schedule-date__year-time {
+      font-size: 15.5px !important;
     }
 
     .schedule-structure__illustration {
