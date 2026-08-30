@@ -196,20 +196,24 @@
           </div>
         </div>
 
-        <footer class="prices-note">
-          <span class="prices-note__icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48">
-              <path
-                d="M24 42C8.5 31.2 8.2 20.8 14.2 15.8a8.8 8.8 0 0 1 11.2 1.1L27 18.5l1.6-1.6a8.8 8.8 0 0 1 11.2-1.1C45.8 20.8 39.5 31.2 24 42Z"
-              />
-            </svg>
-          </span>
+<a
+  class="prices-note"
+  href="/kontakt/"
+  aria-label="Za upis ili više informacija"
+>
+  <span class="prices-note__icon" aria-hidden="true">
+    <svg viewBox="0 0 48 48">
+      <path
+        d="M24 42C8.5 31.2 8.2 20.8 14.2 15.8a8.8 8.8 0 0 1 11.2 1.1L27 18.5l1.6-1.6a8.8 8.8 0 0 1 11.2-1.1C45.8 20.8 39.5 31.2 24 42Z"
+      />
+    </svg>
+  </span>
 
-          <p>
-            Mogućnost dogovora za posebne situacije.<br />
-            Za više informacija, kontaktirajte nas.
-          </p>
-        </footer>
+  <span class="prices-note__text">
+    Za upis ili više informacija
+    <span class="prices-note__arrow" aria-hidden="true">→</span>
+  </span>
+</a>
       </article>
     </div>
   </div>
@@ -504,12 +508,41 @@
     stroke-linejoin: round;
   }
 
-  .prices-note p {
-    margin: 0;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 17px;
-    line-height: 1.35;
-  }
+  .prices-note {
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.prices-note:hover {
+  background:
+    linear-gradient(
+      90deg,
+      #3a281e,
+      #5a3a27
+    );
+}
+
+.prices-note__text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #f8efe6;
+}
+
+.prices-note__arrow {
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.prices-note:hover .prices-note__arrow {
+  transform: translateX(4px);
+}
 
   @media (max-width: 1050px) {
     .schedule-investment {
@@ -620,8 +653,8 @@
       height: 39px;
     }
 
-    .prices-note p {
-      font-size: 16px;
-    }
+    .prices-note__text {
+  font-size: 16px;
+}
   }
 </style>
