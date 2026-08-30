@@ -1,16 +1,25 @@
+---
+const PAYMENT_REDIRECT_ACTIVE = false;
+---
+
 <article class="nova-left">
+
   <header class="nova-left__heading">
+
     <span class="nova-left__number" aria-hidden="true">
       1.
     </span>
 
     <div class="nova-left__heading-text">
+
       <h2>Želim se upisati</h2>
 
       <p>Prijava za školsku godinu 2026./2027.</p>
 
       <span class="nova-left__heading-line" aria-hidden="true"></span>
+
     </div>
+
   </header>
 
   <form
@@ -19,8 +28,10 @@
     method="POST"
     accept-charset="UTF-8"
   >
+
     <!-- FormSubmit postavke -->
     <div class="nova-left__hidden-fields" aria-hidden="true">
+
       <input
         type="hidden"
         name="_subject"
@@ -39,6 +50,16 @@
         value="false"
       />
 
+      {
+        PAYMENT_REDIRECT_ACTIVE && (
+          <input
+            type="hidden"
+            name="_next"
+            value="https://novaparadigma.hr/placanje-skola/"
+          />
+        )
+      }
+
       <input
         type="hidden"
         name="Vrsta obrasca"
@@ -51,9 +72,11 @@
         tabindex="-1"
         autocomplete="off"
       />
+
     </div>
 
     <div class="nova-left__field">
+
       <label for="nova-application-name">
         Ime i prezime
       </label>
@@ -66,9 +89,11 @@
         placeholder="Unesite vaše ime i prezime"
         required
       />
+
     </div>
 
     <div class="nova-left__field">
+
       <label for="nova-application-email">
         E-mail
       </label>
@@ -81,9 +106,11 @@
         placeholder="Unesite e-mail adresu"
         required
       />
+
     </div>
 
     <div class="nova-left__field">
+
       <label for="nova-application-phone">
         Mobitel
       </label>
@@ -95,9 +122,11 @@
         autocomplete="tel"
         placeholder="Unesite broj mobitela"
       />
+
     </div>
 
     <label class="nova-left__checkbox">
+
       <input
         type="checkbox"
         name="Želim se upisati"
@@ -113,24 +142,31 @@
       <span class="nova-left__checkbox-text">
         Želim se upisati u školu NOvA.
       </span>
+
     </label>
 
     <button class="nova-left__button" type="submit">
+
       <span>Prijavi se</span>
 
       <span class="nova-left__button-arrow" aria-hidden="true">
         ⟶
       </span>
+
     </button>
+
   </form>
 
   <aside class="nova-left__info">
+
     <div class="nova-left__calendar" aria-hidden="true">
+
       <svg
         viewBox="0 0 48 48"
         role="presentation"
         focusable="false"
       >
+
         <rect
           x="8"
           y="11"
@@ -149,30 +185,47 @@
 
         <path d="M15.5 34H19"></path>
         <path d="M23 34H26.5"></path>
+
       </svg>
+
     </div>
 
     <div class="nova-left__info-content">
+
       <h3>Što slijedi?</h3>
 
       <ul>
+
         <li>
+
           <span class="nova-left__check" aria-hidden="true">
             ✓
           </span>
 
-          <span>Poslat ćemo ti upute za uplatu školarine.</span>
+          <span>
+            {
+              PAYMENT_REDIRECT_ACTIVE
+                ? "Nakon prijave otvorit će se stranica za odabir načina plaćanja."
+                : "Poslat ćemo ti upute za uplatu školarine."
+            }
+          </span>
+
         </li>
 
         <li>
+
           <span class="nova-left__check" aria-hidden="true">
             ✓
           </span>
 
-          <span>Nakon potvrde uplate poslat ćemo ti poveznicu za sve online susrete.</span>
+          <span>
+            Nakon potvrde uplate poslat ćemo ti poveznicu za sve online susrete.
+          </span>
+
         </li>
 
         <li>
+
           <span class="nova-left__check" aria-hidden="true">
             ✓
           </span>
@@ -180,13 +233,19 @@
           <span>
             Dodat ćemo te u WhatsApp grupu u kojoj ćeš primati sve važne obavijesti vezane uz školu.
           </span>
+
         </li>
+
       </ul>
+
     </div>
+
   </aside>
+
 </article>
 
 <style>
+
   .nova-left,
   .nova-left *,
   .nova-left *::before,
@@ -578,12 +637,15 @@
   }
 
   @media (max-width: 980px) {
+
     .nova-left {
       padding-right: 0;
     }
+
   }
 
   @media (max-width: 640px) {
+
     .nova-left__heading {
       grid-template-columns: 49px minmax(0, 1fr);
       gap: 15px;
@@ -637,5 +699,7 @@
     .nova-left__info-content h3 {
       font-size: 21px;
     }
+
   }
+
 </style>
