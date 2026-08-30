@@ -1,590 +1,395 @@
 <section class="book-payment">
 
-
   <!-- CITAZIONE SUPERIORE -->
-
   <div class="book-payment__intro">
 
     <div class="book-payment__divider">
-
       <span></span>
-
       <img
         src="/images/ui/star-symbol.png"
         alt=""
       />
-
       <span></span>
-
     </div>
-
 
     <div class="book-payment__quote-text">
-      "Putovanje između vidljivog i nevidljivog."
+      "Roman koji otvara prostor za nova pitanja
+        i dublje razumijevanje sebe i svijeta."
     </div>
-
 
   </div>
 
 
-
-
-
-  <!-- LIBRO + PAGAMENTO -->
-
+  <!-- LIBRO + EDIZIONI -->
   <div class="book-payment__content">
 
-
     <div class="book-payment__cover">
-
       <img
         src="/images/books/prah-dana-cover.png"
-        alt="Prah dana e-book"
+        alt="Prah dana – Marco Bianco"
       />
-
     </div>
-
-
 
 
     <div class="book-payment__purchase">
 
-
-      <h2>
-        PRAH DANA
-      </h2>
+      
 
 
+      <div class="book-payment__formats">
 
-      <p class="book-payment__description">
+        <!-- E-BOOK -->
+        <div class="book-payment__format">
 
-        Roman koji otvara prostor za nova pitanja
-        i dublje razumijevanje sebe i svijeta.
+          <div class="book-payment__format-label">
+            E-KNJIGA
+          </div>
 
-      </p>
+          <div class="book-payment__price">
+            6,50 €
+          </div>
+
+          <p class="book-payment__format-info">
+            EPUB format · za mobitel, tablet i računalo
+          </p>
+
+          <p class="book-payment__vat">
+            Preuzimanje odmah nakon kupnje.
+          </p>
+
+          <a
+            href="https://buy.stripe.com/7sY8wR9gYcMv1ut5mT8g00a"
+            class="book-payment__button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            KUPI E-KNJIGU
+            <span>→</span>
+          </a>
+
+        </div>
 
 
+        <div class="book-payment__format-separator">
+          <span></span>
+          <span class="book-payment__or">ILI</span>
+          <span></span>
+        </div>
 
 
-      <div class="book-payment__price">
+        <!-- TISKANO IZDANJE -->
+        <div class="book-payment__format">
 
-        6,50 €
+          <div class="book-payment__format-label">
+            TISKANO IZDANJE
+          </div>
+
+          <div class="book-payment__price">
+            10,00 €
+          </div>
+
+          <p class="book-payment__format-info">
+            A5 · 210 stranica · meki uvez
+          </p>
+
+          <p class="book-payment__vat">
+            Dostava se obračunava prema adresi isporuke.
+          </p>
+
+          <a
+            href="https://www.lulu.com/shop/marco-bianco/prah-dana/paperback/product-e727ye2.html"
+            class="book-payment__button book-payment__button--print"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NARUČI TISKANO IZDANJE
+            <span>→</span>
+          </a>
+
+        </div>
 
       </div>
 
-
-
-
-      <p class="book-payment__vat">
-
-        PDV uključen.
-
-      </p>
-
-
-
-
-      <a
-        href="https://buy.stripe.com/7sY8wR9gYcMv1ut5mT8g00a"
-        class="book-payment__button"
-        target="_blank"
-      >
-
-        NASTAVI NA PLAĆANJE
-
-        <span>→</span>
-
-      </a>
-
-
     </div>
-
 
   </div>
 
 
-
-
-
-
   <!-- CITAZIONE FINALE -->
-
-
   <div class="book-payment__quote-final">
 
-
     <div class="book-payment__divider">
-
       <span></span>
-
       <img
         src="/images/ui/star-symbol.png"
         alt=""
       />
-
       <span></span>
-
     </div>
-
-
 
     <div class="book-payment__quote-text">
-
       "Nije to put kojim se ide tražeći odgovore,
       nego onaj kojim se ide učeći slušati."
-
     </div>
 
-
   </div>
-
-
 
 </section>
 
 
-
-
-
-
-
 <style>
 
-
 .book-payment {
-
   background:#f7f1e9;
-
   padding:20px 30px 80px;
-
 }
-
 
 
 /* CITAZIONI */
 
 .book-payment__intro {
-
   width:100%;
-
   text-align:center;
-
-  margin-top:-25px;
-
-  margin-bottom:70px;
-
+  margin-top:5px;
+  margin-bottom:45px;
 }
-
-
 
 .book-payment__quote-final {
-
   width:100%;
-
   text-align:center;
-
   margin-top:105px;
-
 }
-
-
 
 .book-payment__divider {
-
   display:flex;
-
   justify-content:center;
-
   align-items:center;
-
   gap:15px;
-
   margin-bottom:22px;
-
 }
-
-
 
 .book-payment__divider span {
-
   width:60px;
-
   height:1px;
-
   background:#d4bfa8;
-
 }
-
-
 
 .book-payment__divider img {
-
   width:14px;
-
   height:auto;
-
 }
-
-
 
 .book-payment__quote-text {
-
-
   width:100%;
-
   max-width:700px;
-
   margin:0 auto;
-
-
   text-align:center;
 
-
   font-family:
-  "Cormorant Garamond",
-  serif;
-
+    "Cormorant Garamond",
+    serif;
 
   font-style:italic;
-
-
   font-size:28px;
-
-
   line-height:1.45;
-
-
   color:#4c4036;
-
-
 }
-
-
-
 
 
 /* CONTENUTO CENTRALE */
 
-
 .book-payment__content {
-
-  max-width:900px;
-
+  max-width:960px;
   margin:auto;
-
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
-  gap:70px;
-
+  gap:75px;
   align-items:center;
-
 }
-
-
-
 
 
 /* COPERTINA */
 
-
 .book-payment__cover {
-
   display:flex;
-
   justify-content:center;
-
-  transform:translateY(30px);
-
+  transform:translateY(20px);
 }
-
-
 
 .book-payment__cover img {
-
-
   display:block;
-
-
   width:100%;
+  max-width:450px;
 
-
-  max-width:390px;
-
-
-
-  -webkit-mask-image:linear-gradient(
-
-    to right,
-
-    transparent 0%,
-
-    rgba(0,0,0,.85) 8%,
-
-    #000 18%,
-
-    #000 100%
-
-  );
-
-
-  mask-image:linear-gradient(
-
-    to right,
-
-    transparent 0%,
-
-    rgba(0,0,0,.85) 8%,
-
-    #000 18%,
-
-    #000 100%
-
-  );
-
-
+  filter:drop-shadow(12px 18px 18px rgba(60,45,32,.18));
 }
 
 
-
-
-
-
-
-/* PAGAMENTO */
-
+/* ACQUISTO */
 
 .book-payment__purchase {
-
   text-align:center;
-
+  transform:translateY(15px);
 }
-
-
 
 .book-payment__purchase h2 {
-
-
   margin:0;
 
-
   font-family:
-  "Cormorant Garamond",
-  serif;
-
+    "Cormorant Garamond",
+    serif;
 
   font-size:38px;
-
-
   font-weight:400;
-
-
   letter-spacing:.12em;
-
-
   color:#3d342c;
-
-
 }
-
-
-
-
 
 .book-payment__description {
-
-
-  max-width:360px;
-
-
-  margin:25px auto;
-
-
+  max-width:380px;
+  margin:22px auto 35px;
   font-size:18px;
-
-
   line-height:1.5;
-
-
   color:#625449;
-
-
 }
 
 
+/* FORMATI */
 
+.book-payment__formats {
+  max-width:390px;
+  margin:0 auto;
+}
 
+.book-payment__format-label {
+  margin-bottom:5px;
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:.20em;
+  color:#795638;
+}
 
 .book-payment__price {
-
-
   font-family:
-  "Cormorant Garamond",
-  serif;
+    "Cormorant Garamond",
+    serif;
 
-
-  font-size:62px;
-
-
+  font-size:50px;
+  line-height:1.05;
   color:#3c3128;
-
-
 }
 
-
-
-
+.book-payment__format-info {
+  margin:8px 0 3px;
+  font-size:14px;
+  color:#625449;
+}
 
 .book-payment__vat {
-
-
-  font-size:14px;
-
-
+  margin:5px 0 0;
+  min-height:21px;
+  font-size:13px;
+  line-height:1.5;
   color:#8b7c70;
-
-
 }
 
 
+/* SEPARATORE TRA FORMATI */
+
+.book-payment__format-separator {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:30px 0;
+}
+
+.book-payment__format-separator > span:not(.book-payment__or) {
+  flex:1;
+  height:1px;
+  background:#d4bfa8;
+}
+
+.book-payment__or {
+  font-size:10px;
+  letter-spacing:.18em;
+  color:#a18e7d;
+}
 
 
+/* PULSANTI */
 
 .book-payment__button {
-
-
-  margin-top:35px;
-
-
+  margin-top:18px;
   display:flex;
-
-
   justify-content:center;
-
-
   align-items:center;
-
-
   gap:15px;
-
-
   padding:16px;
 
-
   background:#795638;
-
-
   color:white;
-
-
   text-decoration:none;
 
-
-  font-size:14px;
-
-
+  font-size:13px;
   letter-spacing:.18em;
 
-
+  transition:background .2s ease;
 }
-
-
 
 .book-payment__button:hover {
-
   background:#5d4029;
-
 }
 
+.book-payment__button--print {
+  background:#66503d;
+}
 
-
-
-
-
+.book-payment__button--print:hover {
+  background:#4f3d2e;
+}
 
 
 /* MOBILE */
 
+@media(max-width:700px) {
 
-@media(max-width:700px){
+  .book-payment {
+    padding-inline:20px;
+  }
 
+  .book-payment__intro {
+    margin-top:0;
+    margin-bottom:45px;
+  }
 
-.book-payment {
+  .book-payment__content {
+    grid-template-columns:1fr;
+    gap:45px;
+  }
 
-  padding-inline:20px;
+  .book-payment__cover {
+    transform:none;
+  }
 
-}
+  .book-payment__cover img {
+    max-width:320px;
+  }
 
+  .book-payment__purchase h2 {
+    font-size:32px;
+  }
 
+  .book-payment__price {
+    font-size:46px;
+  }
 
-.book-payment__intro {
+  .book-payment__quote-text {
+    font-size:22px;
+  }
 
-  margin-top:0;
-
-  margin-bottom:45px;
-
-}
-
-
-
-.book-payment__content {
-
-  grid-template-columns:1fr;
-
-  gap:35px;
-
-}
-
-
-
-.book-payment__cover {
-
-  transform:none;
-
-}
-
-
-
-.book-payment__cover img {
-
-  max-width:320px;
+  .book-payment__quote-final {
+    margin-top:70px;
+  }
 
 }
-
-
-
-.book-payment__purchase h2 {
-
-  font-size:32px;
-
-}
-
-
-
-.book-payment__price {
-
-  font-size:52px;
-
-}
-
-
-
-.book-payment__quote-text {
-
-  font-size:22px;
-
-}
-
-
-
-.book-payment__quote-final {
-
-  margin-top:70px;
-
-}
-
-
-}
-
 </style>
