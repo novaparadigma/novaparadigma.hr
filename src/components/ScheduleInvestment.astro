@@ -1,5 +1,10 @@
+---
+const EARLY_BIRD_ACTIVE = true;
+---
+
 <section class="schedule-investment">
   <div class="schedule-investment__inner">
+
     <header class="investment-title">
       <span class="investment-title__line"></span>
 
@@ -31,8 +36,11 @@
     </header>
 
     <div class="investment-grid">
+
       <article class="investment-benefits">
+
         <div class="investment-benefit">
+
           <div class="investment-benefit__icon" aria-hidden="true">
             <svg viewBox="0 0 54 54">
               <circle cx="27" cy="27" r="24" />
@@ -54,9 +62,11 @@
               Susreti uživo putem Zooma u zajedničkom prostoru učenja.
             </p>
           </div>
+
         </div>
 
         <div class="investment-benefit">
+
           <div class="investment-benefit__icon" aria-hidden="true">
             <svg viewBox="0 0 54 54">
               <circle cx="27" cy="27" r="24" />
@@ -79,9 +89,11 @@
               Jasan i progresivan put osobnog razvoja.
             </p>
           </div>
+
         </div>
 
         <div class="investment-benefit">
+
           <div class="investment-benefit__icon" aria-hidden="true">
             <svg viewBox="0 0 54 54">
               <circle cx="27" cy="27" r="24" />
@@ -116,9 +128,11 @@
               putu.
             </p>
           </div>
+
         </div>
 
         <div class="investment-benefit">
+
           <div class="investment-benefit__icon" aria-hidden="true">
             <svg viewBox="0 0 54 54">
               <circle cx="27" cy="27" r="24" />
@@ -135,17 +149,31 @@
               niste u mogućnosti prisustvovati uživo.
             </p>
           </div>
+
         </div>
+
       </article>
 
       <article class="investment-prices">
+
         <header class="prices-header">
           <h2>Cijena jedne akademske godine</h2>
-          <span></span>
+
+          <span class="prices-header__line"></span>
+
+          {
+            EARLY_BIRD_ACTIVE && (
+              <div class="early-bird-badge">
+                Early bird cijene za prijave do 31.10.2026.
+              </div>
+            )
+          }
         </header>
 
         <div class="prices-content">
+
           <div class="price-option">
+
             <div class="price-option__icon" aria-hidden="true">
               <svg viewBox="0 0 54 54">
                 <path d="M8 22 26 8h18v18L26 44 8 26v-4Z" />
@@ -157,20 +185,42 @@
             </div>
 
             <div class="price-option__content">
+
               <h3>Jednokratno plaćanje</h3>
 
-              <p>
-                <strong>850</strong>
-                <span>€</span>
-              </p>
+              {
+                EARLY_BIRD_ACTIVE ? (
+                  <div class="early-bird-price">
+
+                    <span class="old-price">
+                      850 €
+                    </span>
+
+                    <p>
+                      <strong>800</strong>
+                      <span>€</span>
+                    </p>
+
+                  </div>
+                ) : (
+                  <p>
+                    <strong>850</strong>
+                    <span>€</span>
+                  </p>
+                )
+              }
+
             </div>
+
           </div>
 
           <div class="price-divider"></div>
 
           <div class="price-option">
+
             <div class="price-option__icon" aria-hidden="true">
               <svg viewBox="0 0 54 54">
+
                 <path
                   d="M10 15h28a6 6 0 0 1 6 6v22H10a6 6 0 0 1-6-6V21a6 6 0 0 1 6-6Z"
                 />
@@ -180,46 +230,82 @@
                 <path d="M34 26h12v9H34a4.5 4.5 0 0 1 0-9Z" />
 
                 <circle cx="38" cy="30.5" r="1.2" />
+
               </svg>
             </div>
 
             <div class="price-option__content">
+
               <h3>Plaćanje na rate</h3>
 
-              <p class="price-installments">
-                <strong>10</strong>
-                <span>rata po</span>
-                <strong>99</strong>
-                <span>€</span>
-              </p>
+              {
+                EARLY_BIRD_ACTIVE ? (
+                  <div class="early-bird-price early-bird-price--installments">
+
+                    <span class="old-price">
+                      10 rata po 99 €
+                    </span>
+
+                    <p class="price-installments">
+                      <strong>10</strong>
+                      <span>rata po</span>
+                      <strong>90</strong>
+                      <span>€</span>
+                    </p>
+
+                  </div>
+                ) : (
+                  <p class="price-installments">
+                    <strong>10</strong>
+                    <span>rata po</span>
+                    <strong>99</strong>
+                    <span>€</span>
+                  </p>
+                )
+              }
+
             </div>
+
           </div>
+
         </div>
 
-<a
-  class="prices-note"
-  href="/kontakt/"
-  aria-label="Za upis ili više informacija"
->
-  <span class="prices-note__icon" aria-hidden="true">
-    <svg viewBox="0 0 48 48">
-      <path
-        d="M24 42C8.5 31.2 8.2 20.8 14.2 15.8a8.8 8.8 0 0 1 11.2 1.1L27 18.5l1.6-1.6a8.8 8.8 0 0 1 11.2-1.1C45.8 20.8 39.5 31.2 24 42Z"
-      />
-    </svg>
-  </span>
+        <a
+          class="prices-note"
+          href="/kontakt/"
+          aria-label="Za upis ili više informacija"
+        >
 
-  <span class="prices-note__text">
-    Za upis ili više informacija
-    <span class="prices-note__arrow" aria-hidden="true">→</span>
-  </span>
-</a>
+          <span class="prices-note__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <path
+                d="M24 42C8.5 31.2 8.2 20.8 14.2 15.8a8.8 8.8 0 0 1 11.2 1.1L27 18.5l1.6-1.6a8.8 8.8 0 0 1 11.2-1.1C45.8 20.8 39.5 31.2 24 42Z"
+              />
+            </svg>
+          </span>
+
+          <span class="prices-note__text">
+            Za upis ili više informacija
+
+            <span
+              class="prices-note__arrow"
+              aria-hidden="true"
+            >
+              →
+            </span>
+          </span>
+
+        </a>
+
       </article>
+
     </div>
+
   </div>
 </section>
 
 <style>
+
   .schedule-investment {
     padding: 0 60px 58px;
     background: #f7f1e9;
@@ -293,7 +379,7 @@
     background: rgba(251, 247, 241, 0.92);
   }
 
-  /* BENEFICI A SINISTRA */
+  /* BENEFICI */
 
   .investment-benefits {
     padding: 12px 31px;
@@ -351,7 +437,7 @@
     color: #403831;
   }
 
-  /* PREZZI A DESTRA */
+  /* PREZZI */
 
   .investment-prices {
     display: flex;
@@ -379,13 +465,37 @@
     text-transform: uppercase;
   }
 
-  .prices-header span {
+  .prices-header__line {
     display: block;
     width: 46px;
     height: 1px;
     margin: 15px auto 0;
     background: #a97a55;
   }
+
+  /* EARLY BIRD */
+
+  .early-bird-badge {
+  width: fit-content;
+  margin: 16px auto 0;
+  padding: 9px 18px;
+  border: 1px solid rgba(148, 101, 64, 0.55);
+  border-radius: 999px;
+  color: #fffaf4;
+  background:
+    linear-gradient(
+      90deg,
+      #a97850,
+      #8a5f3e
+    );
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 3px 10px rgba(91, 59, 35, 0.14);
+}
 
   .prices-content {
     margin: 0 30px;
@@ -469,10 +579,49 @@
     color: #322c28;
   }
 
+  .early-bird-price {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+
+  .early-bird-price--installments {
+    flex-wrap: wrap;
+    gap: 7px 14px;
+  }
+
+  .old-price {
+    position: relative;
+    display: inline-block;
+    flex: 0 0 auto;
+    color: #8f8175 !important;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px !important;
+    line-height: 1 !important;
+    white-space: nowrap;
+  }
+
+  .old-price::after {
+    position: absolute;
+    top: 50%;
+    left: -3px;
+    width: calc(100% + 6px);
+    height: 1px;
+    background: #a87852;
+    content: "";
+    transform: rotate(-5deg);
+  }
+
+  .early-bird-price p {
+    margin: 0;
+  }
+
   .price-divider {
     height: 1px;
     background: rgba(153, 111, 77, 0.26);
   }
+
+  /* CTA */
 
   .prices-note {
     display: grid;
@@ -487,6 +636,19 @@
         90deg,
         #2e2018,
         #4a3021
+      );
+    text-decoration: none;
+    transition:
+      background 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .prices-note:hover {
+    background:
+      linear-gradient(
+        90deg,
+        #3a281e,
+        #5a3a27
       );
   }
 
@@ -508,43 +670,28 @@
     stroke-linejoin: round;
   }
 
-  .prices-note {
-  text-decoration: none;
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease;
-}
+  .prices-note__text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    line-height: 1.35;
+    color: #f8efe6;
+  }
 
-.prices-note:hover {
-  background:
-    linear-gradient(
-      90deg,
-      #3a281e,
-      #5a3a27
-    );
-}
+  .prices-note__arrow {
+    font-size: 22px;
+    line-height: 1;
+    transition: transform 0.25s ease;
+  }
 
-.prices-note__text {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 18px;
-  line-height: 1.35;
-  color: #f8efe6;
-}
-
-.prices-note__arrow {
-  font-size: 22px;
-  line-height: 1;
-  transition: transform 0.25s ease;
-}
-
-.prices-note:hover .prices-note__arrow {
-  transform: translateX(4px);
-}
+  .prices-note:hover .prices-note__arrow {
+    transform: translateX(4px);
+  }
 
   @media (max-width: 1050px) {
+
     .schedule-investment {
       padding-inline: 36px;
     }
@@ -556,9 +703,11 @@
     .investment-prices {
       max-width: none;
     }
+
   }
 
   @media (max-width: 700px) {
+
     .schedule-investment {
       padding: 0 20px 45px;
     }
@@ -608,6 +757,14 @@
       padding: 25px 20px 18px;
     }
 
+    .early-bird-badge {
+    margin-top: 12px;
+    padding: 8px 12px;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    }
+
     .prices-content {
       margin: 0 16px;
       padding: 0 17px;
@@ -642,6 +799,14 @@
       font-size: 23px;
     }
 
+    .early-bird-price {
+      gap: 10px;
+    }
+
+    .old-price {
+      font-size: 20px !important;
+    }
+
     .prices-note {
       grid-template-columns: 42px minmax(0, 1fr);
       gap: 13px;
@@ -654,7 +819,9 @@
     }
 
     .prices-note__text {
-  font-size: 16px;
-}
+      font-size: 16px;
+    }
+
   }
+
 </style>
