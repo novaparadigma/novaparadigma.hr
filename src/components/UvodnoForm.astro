@@ -1,8 +1,6 @@
 <section class="uvodno-form-section" id="prijava">
   <div class="uvodno-form-section__inner">
 
-    
-
     <form
       class="uvodno-form"
       action="https://formsubmit.co/nova.paradigma@yahoo.com"
@@ -31,7 +29,7 @@
       <input
         type="hidden"
         name="_next"
-        value="https://novaparadigma.hr/uvodno-predavanje/hvala/"
+        value="https://novaparadigma.hr/hvala/"
       />
 
       <input
@@ -79,10 +77,15 @@
       </div>
 
       <label class="uvodno-form__privacy">
-        <input type="checkbox" required />
+        <input
+          type="checkbox"
+          name="Prihvaćena pravila privatnosti"
+          value="Da"
+          required
+        />
 
         <span>
-          Prihvaćam {" "}
+          Prihvaćam{" "}
           <a href="/pravila-privatnosti/" target="_blank">
             pravila privatnosti
           </a>.
@@ -91,7 +94,9 @@
 
       <button class="uvodno-form__button" type="submit">
         <span>Prijavi se na uvodno predavanje</span>
-        <span class="uvodno-form__arrow" aria-hidden="true">⟶</span>
+        <span class="uvodno-form__arrow" aria-hidden="true">
+          ⟶
+        </span>
       </button>
 
     </form>
@@ -113,45 +118,6 @@
   .uvodno-form-section__inner {
     width: min(100%, 720px);
     margin: 0 auto;
-  }
-
-  .uvodno-form-section__heading {
-    margin-bottom: 42px;
-    text-align: center;
-  }
-
-  .uvodno-form-section__eyebrow {
-    display: block;
-    margin-bottom: 14px;
-
-    color: #a97850;
-
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-
-  .uvodno-form-section h2 {
-    margin: 0;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(40px, 5vw, 56px);
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -0.015em;
-  }
-
-  .uvodno-form-section__heading p {
-    margin: 18px 0 0;
-
-    color: #74685e;
-
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.035em;
   }
 
   .uvodno-form {
@@ -309,21 +275,6 @@
   @media (max-width: 700px) {
     .uvodno-form-section {
       padding: 62px 22px 68px;
-    }
-
-    .uvodno-form-section__heading {
-      margin-bottom: 32px;
-    }
-
-    .uvodno-form-section h2 {
-      font-size: 40px;
-    }
-
-    .uvodno-form-section__heading p {
-      max-width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.5;
     }
 
     .uvodno-form {
