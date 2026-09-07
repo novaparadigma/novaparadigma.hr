@@ -50,15 +50,15 @@ const PAYMENT_REDIRECT_ACTIVE = false;
         value="false"
       />
 
-      {
-        PAYMENT_REDIRECT_ACTIVE && (
-          <input
-            type="hidden"
-            name="_next"
-            value="https://novaparadigma.hr/placanje-skola/"
-          />
-        )
-      }
+      <input
+        type="hidden"
+        name="_next"
+        value={
+          PAYMENT_REDIRECT_ACTIVE
+            ? "https://novaparadigma.hr/placanje-skola/"
+            : "https://novaparadigma.hr/hvala/"
+        }
+      />
 
       <input
         type="hidden"

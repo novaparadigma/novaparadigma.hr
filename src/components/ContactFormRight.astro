@@ -41,6 +41,12 @@
 
       <input
         type="hidden"
+        name="_next"
+        value="https://novaparadigma.hr/hvala/"
+      />
+
+      <input
+        type="hidden"
         name="Vrsta obrasca"
         value="Pitanje o školi ili programu"
       />
@@ -107,36 +113,36 @@
   </form>
 
   <aside class="nova-right__info">
-<div class="nova-right__chat" aria-hidden="true">
-  <svg
-    viewBox="0 0 64 56"
-    role="presentation"
-    focusable="false"
-  >
-    <path
-      class="nova-right__bubble"
-      d="
-        M32 6
-        C47 6 58 15 58 27
-        C58 39 47 48 32 48
-        C28 48 24 47 21 46
-        L10 52
-        L13 41
-        C7 37 4 32 4 27
-        C4 15 16 6 32 6
-        Z
-      "
-    />
+    <div class="nova-right__chat" aria-hidden="true">
+      <svg
+        viewBox="0 0 64 56"
+        role="presentation"
+        focusable="false"
+      >
+        <path
+          class="nova-right__bubble"
+          d="
+            M32 6
+            C47 6 58 15 58 27
+            C58 39 47 48 32 48
+            C28 48 24 47 21 46
+            L10 52
+            L13 41
+            C7 37 4 32 4 27
+            C4 15 16 6 32 6
+            Z
+          "
+        />
 
-    <path
-      class="nova-right__bubble-lines"
-      d="
-        M18 24H46
-        M18 31H39
-      "
-    />
-  </svg>
-</div>
+        <path
+          class="nova-right__bubble-lines"
+          d="
+            M18 24H46
+            M18 31H39
+          "
+        />
+      </svg>
+    </div>
 
     <div class="nova-right__info-content">
       <h3>Slobodno pitaj.</h3>
@@ -398,39 +404,39 @@
   }
 
   .nova-right__chat {
-  display: flex;
-  width: 56px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  color: var(--right-gold);
-}
+    display: flex;
+    width: 56px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    color: var(--right-gold);
+  }
 
-.nova-right__chat svg {
-  display: block !important;
-  width: 56px !important;
-  height: 50px !important;
-  max-width: 56px !important;
-  max-height: 50px !important;
-  overflow: visible;
-  fill: none !important;
-}
+  .nova-right__chat svg {
+    display: block !important;
+    width: 56px !important;
+    height: 50px !important;
+    max-width: 56px !important;
+    max-height: 50px !important;
+    overflow: visible;
+    fill: none !important;
+  }
 
-.nova-right__bubble {
-  fill: rgba(164, 116, 69, 0.025) !important;
-  stroke: currentColor !important;
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
+  .nova-right__bubble {
+    fill: rgba(164, 116, 69, 0.025) !important;
+    stroke: currentColor !important;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 
-.nova-right__bubble-lines {
-  fill: none !important;
-  stroke: currentColor !important;
-  stroke-width: 1.1;
-  stroke-linecap: round;
-  opacity: 0.65;
-}
+  .nova-right__bubble-lines {
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 1.1;
+    stroke-linecap: round;
+    opacity: 0.65;
+  }
 
   .nova-right__info-content {
     min-width: 0;
@@ -501,15 +507,13 @@
       padding: 22px 20px;
     }
 
-    @media (max-width: 640px) {
-  .nova-right__chat,
-  .nova-right__chat svg {
-    width: 46px !important;
-    height: 42px !important;
-    max-width: 46px !important;
-    max-height: 42px !important;
-  }
-}
+    .nova-right__chat,
+    .nova-right__chat svg {
+      width: 46px !important;
+      height: 42px !important;
+      max-width: 46px !important;
+      max-height: 42px !important;
+    }
 
     .nova-right__info-content h3 {
       font-size: 21px;
