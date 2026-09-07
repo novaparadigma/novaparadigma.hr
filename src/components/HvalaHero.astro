@@ -15,23 +15,14 @@
       Uskoro ćete primiti naš odgovor.
     </p>
 
-    <p class="thank-you__redirect">
-      Samo trenutak...
-    </p>
+    <a class="thank-you__button" href="/put-nova">
+       Nastavite na Put NOvA
+      <span aria-hidden="true">⟶</span>
+    </a>
 
   </div>
 </section>
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const redirectTo = params.get("dalje");
-
-  if (redirectTo) {
-    setTimeout(() => {
-      window.location.href = redirectTo;
-    }, 2500);
-  }
-</script>
 
 <style>
   .thank-you {
@@ -96,17 +87,39 @@
     line-height: 1.5;
   }
 
-  .thank-you__redirect {
-    margin: 34px 0 0;
+  .thank-you__button {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
 
-    color: #a97850;
+  margin-top: 34px;
+  padding: 15px 24px;
 
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
+  border: 1px solid rgba(169, 120, 80, 0.55);
+  border-radius: 3px;
+
+  color: #8a5f3e;
+  text-decoration: none;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.thank-you__button:hover {
+  background: #a97850;
+  color: #fff;
+  transform: translateY(-1px);
+}
 
   @media (max-width: 700px) {
     .thank-you {
