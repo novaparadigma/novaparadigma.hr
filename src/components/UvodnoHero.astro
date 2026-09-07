@@ -1,0 +1,152 @@
+<section class="uvodno-hero">
+  <div class="uvodno-hero__inner">
+
+    <span class="uvodno-hero__eyebrow">
+      Upoznajete školu
+    </span>
+
+    <h1>Besplatno uvodno predavanje</h1>
+
+    <div class="uvodno-hero__meta">
+      <span>21. listopada 2026. · 20:00</span>
+      <span>Online putem Zooma</span>
+    </div>
+
+    <p class="uvodno-hero__intro">
+      Upoznajte pristup škole NOvA, znanje iz kojeg je nastala
+      i način na koji radimo tijekom prve godine.
+    </p>
+
+    <a class="uvodno-hero__button" href="#prijava">
+      <span>Prijavi se</span>
+      <span aria-hidden="true">⟶</span>
+    </a>
+
+  </div>
+</section>
+
+<style>
+  .uvodno-hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+    overflow: hidden;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(20, 18, 15, 0.84),
+        rgba(20, 18, 15, 0.38)
+      ),
+      url("/images/sections/uvodno-hero.webp") center / cover no-repeat;
+
+    color: #f8f2ea;
+  }
+
+  .uvodno-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1332px);
+  margin: 0 auto;
+  transform: translateY(-34px);
+}
+
+  .uvodno-hero__eyebrow {
+  display: block;
+  margin-bottom: 20px;
+  color: #c58b5e;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+  .uvodno-hero h1 {
+  max-width: 650px;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(54px, 6vw, 82px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+  .uvodno-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin-top: 26px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .uvodno-hero__intro {
+    max-width: 620px;
+    margin: 25px 0 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    line-height: 1.45;
+    color: rgba(248, 242, 234, 0.9);
+  }
+
+  .uvodno-hero__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 29px;
+    padding: 15px 24px;
+    border-radius: 4px;
+
+    background:
+      linear-gradient(
+        90deg,
+        #8a5f3e,
+        #a97850
+      );
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    transition:
+      transform 0.2s ease,
+      filter 0.2s ease;
+  }
+
+  .uvodno-hero__button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08);
+  }
+
+  @media (max-width: 700px) {
+  .uvodno-hero__inner {
+    transform: translateY(-10px);
+  }
+
+  .uvodno-hero__eyebrow {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+}
+
+    .uvodno-hero__intro {
+      font-size: 19px;
+    }
+
+    .uvodno-hero__meta {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+</style>

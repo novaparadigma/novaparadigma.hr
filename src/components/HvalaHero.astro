@@ -1,0 +1,129 @@
+<section class="thank-you">
+  <div class="thank-you__inner">
+
+    <span class="thank-you__eyebrow">
+      NOvA
+    </span>
+
+    <h1>Hvala!</h1>
+
+    <p class="thank-you__lead">
+      Vaša poruka je uspješno poslana.
+    </p>
+
+    <p class="thank-you__text">
+      Uskoro ćete primiti naš odgovor.
+    </p>
+
+    <p class="thank-you__redirect">
+      Samo trenutak...
+    </p>
+
+  </div>
+</section>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const redirectTo = params.get("dalje");
+
+  if (redirectTo) {
+    setTimeout(() => {
+      window.location.href = redirectTo;
+    }, 2500);
+  }
+</script>
+
+<style>
+  .thank-you {
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 24px;
+
+    background:
+      linear-gradient(
+        180deg,
+        #f4eee6 0%,
+        #eee6dc 100%
+      );
+
+    color: #2f2a25;
+  }
+
+  .thank-you__inner {
+    width: min(100%, 720px);
+    text-align: center;
+  }
+
+  .thank-you__eyebrow {
+    display: block;
+    margin-bottom: 18px;
+
+    color: #a97850;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .thank-you h1 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(64px, 8vw, 92px);
+    font-weight: 400;
+    line-height: 0.95;
+  }
+
+  .thank-you__lead {
+    margin: 26px 0 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .thank-you__text {
+    margin: 12px 0 0;
+
+    color: #6f645a;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .thank-you__redirect {
+    margin: 34px 0 0;
+
+    color: #a97850;
+
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 700px) {
+    .thank-you {
+      min-height: 68vh;
+      padding: 70px 22px;
+    }
+
+    .thank-you h1 {
+      font-size: 64px;
+    }
+
+    .thank-you__lead {
+      font-size: 24px;
+    }
+
+    .thank-you__text {
+      font-size: 18px;
+    }
+  }
+</style>
