@@ -1,3 +1,4 @@
+
 <section class="uvodno-form-section" id="prijava">
   <div class="uvodno-form-section__inner">
 
@@ -21,9 +22,9 @@
       />
 
       <input
-    type="hidden"
-    name="_captcha"
-    value="false"
+        type="hidden"
+        name="_captcha"
+        value="false"
       />
 
       <input
@@ -38,7 +39,6 @@
         value="Uvodno predavanje – 21.10.2026."
       />
 
-      
       <div class="uvodno-form__field">
         <label for="uvodno-name">
           Ime i prezime
@@ -79,20 +79,60 @@
 
         <span>
           Prihvaćam{" "}
-          <a href="/pravila-privatnosti/" target="_blank">
+          <a
+            href="/pravila-privatnosti/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             pravila privatnosti
           </a>.
         </span>
       </label>
 
-      <button class="uvodno-form__button" type="submit">
+      <button
+        class="uvodno-form__button"
+        type="submit"
+      >
         <span>Prijavi se na uvodno predavanje</span>
-        <span class="uvodno-form__arrow" aria-hidden="true">
+        <span
+          class="uvodno-form__arrow"
+          aria-hidden="true"
+        >
           ⟶
         </span>
       </button>
 
+      <p
+        class="uvodno-form__error"
+        role="alert"
+        hidden
+      >
+        Nismo uspjeli potvrditi prijavu.
+        Provjerite jeste li već primili potvrdu
+        ili nam se javite prije ponovnog slanja.
+      </p>
+
     </form>
+
+    <div
+      class="uvodno-form__success"
+      role="status"
+      aria-live="polite"
+      tabindex="-1"
+      hidden
+    >
+      <h2>Hvala na prijavi!</h2>
+
+      <p>
+        Vaša prijava za uvodno predavanje škole NOvA
+        uspješno je zaprimljena.
+      </p>
+
+      <p>
+        Zoom poveznicu primit ćete e-mailom
+        prije predavanja.
+      </p>
+    </div>
 
     <p class="uvodno-form-section__note">
       Zoom poveznicu primit ćete e-mailom prije predavanja.
@@ -242,9 +282,25 @@
     box-shadow: 0 10px 28px rgba(98, 67, 45, 0.16);
   }
 
+  .uvodno-form__button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+    box-shadow: none;
+  }
+
   .uvodno-form__arrow {
     font-size: 17px;
     line-height: 1;
+  }
+
+  .uvodno-form__error {
+    margin: 20px 0 0;
+    color: #9a493a;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
   }
 
   .uvodno-form-section__note {
@@ -263,6 +319,52 @@
     left: -9999px;
     opacity: 0;
     pointer-events: none;
+  }
+
+  .uvodno-form__success {
+    padding: 46px 36px;
+
+    border: 1px solid rgba(117, 92, 70, 0.18);
+    border-radius: 3px;
+
+    background: rgba(255, 255, 255, 0.42);
+
+    box-shadow:
+      0 18px 50px rgba(68, 49, 35, 0.055);
+
+    text-align: center;
+  }
+
+  .uvodno-form__success h2 {
+    margin: 0 0 20px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.15;
+
+    color: #302a25;
+  }
+
+  .uvodno-form__success p {
+    margin: 0 0 14px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: #5c5047;
+  }
+
+  .uvodno-form__success p:last-child {
+    margin-bottom: 0;
+  }
+
+  .uvodno-form[hidden],
+  .uvodno-form__success[hidden],
+  .uvodno-form__error[hidden],
+  .uvodno-form-section__note[hidden] {
+    display: none !important;
   }
 
   @media (max-width: 700px) {
@@ -287,5 +389,111 @@
     .uvodno-form-section__note {
       font-size: 16px;
     }
+
+    .uvodno-form__success {
+      padding: 36px 24px;
+    }
+
+    .uvodno-form__success h2 {
+      font-size: 34px;
+    }
   }
 </style>
+
+<script>
+  function initializeUvodnoForm() {
+    const form = document.querySelector(".uvodno-form");
+    const success = document.querySelector(".uvodno-form__success");
+    const note = document.querySelector(".uvodno-form-section__note");
+
+    if (!form || !success) return;
+
+    if (form.dataset.initialized === "true") return;
+    form.dataset.initialized = "true";
+
+    const button = form.querySelector('button[type="submit"]');
+    const errorMessage = form.querySelector(".uvodno-form__error");
+
+    if (!button) return;
+
+    const originalButtonContent = button.innerHTML;
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (button.disabled) return;
+
+      if (errorMessage) {
+        errorMessage.hidden = true;
+      }
+
+      button.disabled = true;
+      button.textContent = "Šalje se...";
+
+      try {
+        const controller = new AbortController();
+
+        const timeout = setTimeout(() => {
+          controller.abort();
+        }, 15000);
+
+        let response;
+
+        try {
+          response = await fetch(
+            "https://formsubmit.co/ajax/nova.paradigma@yahoo.com",
+            {
+              method: "POST",
+              body: new FormData(form),
+              headers: {
+                Accept: "application/json"
+              },
+              signal: controller.signal
+            }
+          );
+        } finally {
+          clearTimeout(timeout);
+        }
+
+        if (!response.ok) {
+          throw new Error("HTTP " + response.status);
+        }
+
+        const result = await response.json();
+
+        if (
+          result.success !== "true" &&
+          result.success !== true
+        ) {
+          throw new Error("FormSubmit nije potvrdio prijavu.");
+        }
+
+        form.hidden = true;
+        success.hidden = false;
+
+        if (note) {
+          note.hidden = true;
+        }
+
+        success.focus();
+
+      } catch (error) {
+        console.error("Greška pri prijavi:", error);
+
+        if (errorMessage) {
+          errorMessage.hidden = false;
+        }
+
+        button.disabled = false;
+        button.innerHTML = originalButtonContent;
+      }
+    });
+  }
+
+  initializeUvodnoForm();
+
+  document.addEventListener(
+    "astro:page-load",
+    initializeUvodnoForm
+  );
+</script>
