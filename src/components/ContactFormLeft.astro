@@ -22,37 +22,31 @@ const PAYMENT_REDIRECT_ACTIVE = true;
 
   </header>
 
-  <form
+   <form
     class="nova-left__form"
-    action="https://formsubmit.co/nova.paradigma@yahoo.com"
+    action="https://api.w3forms.com/submit"
     method="POST"
     accept-charset="UTF-8"
   >
 
-    <!-- FormSubmit postavke -->
+    <!-- W3Forms postavke -->
     <div class="nova-left__hidden-fields" aria-hidden="true">
 
       <input
         type="hidden"
-        name="_subject"
+        name="access_key"
+        value="w3f_4d80fd11b9f770adda3c8d3426a19066d2010789775793a8"
+      />
+
+      <input
+        type="hidden"
+        name="subject"
         value="Nova prijava za školu NOvA"
       />
 
       <input
         type="hidden"
-        name="_template"
-        value="table"
-      />
-
-      <input
-        type="hidden"
-        name="_captcha"
-        value="false"
-      />
-
-      <input
-        type="hidden"
-        name="_next"
+        name="redirect"
         value={
           PAYMENT_REDIRECT_ACTIVE
             ? "https://novaparadigma.hr/placanje-skola/"
@@ -68,7 +62,7 @@ const PAYMENT_REDIRECT_ACTIVE = true;
 
       <input
         type="text"
-        name="_honey"
+        name="company_website"
         tabindex="-1"
         autocomplete="off"
       />
@@ -154,6 +148,16 @@ const PAYMENT_REDIRECT_ACTIVE = true;
       </span>
 
     </button>
+
+    <p
+      class="nova-left__waiting"
+      role="status"
+      aria-live="polite"
+      hidden
+    >
+      Molimo pričekajte. Slanje prijave može potrajati nekoliko sekundi.
+      Nemojte ponovno pritiskati gumb.
+    </p>
 
   </form>
 
@@ -701,5 +705,90 @@ const PAYMENT_REDIRECT_ACTIVE = true;
     }
 
   }
+  .nova-left__button.is-submitting {
+    opacity: 0.7;
+    cursor: wait;
+    pointer-events: none !important;
+  }
 
+  .nova-left__waiting {
+    margin: -8px 0 0;
+    color: var(--left-muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .nova-left__waiting[hidden] {
+    display: none !important;
+  }
 </style>
+<script>
+  function initializeSchoolForm() {
+    const form =
+      document.querySelector<HTMLFormElement>(".nova-left__form");
+
+    if (!form) return;
+
+    if (form.dataset.initialized === "true") return;
+    form.dataset.initialized = "true";
+
+    const button =
+      form.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+    const waitingMessage =
+      form.querySelector<HTMLElement>(".nova-left__waiting");
+
+    if (!button) return;
+
+    const originalButtonContent = button.innerHTML;
+
+    let isSubmitting = false;
+
+    function resetFormState() {
+      isSubmitting = false;
+
+      if (button) {
+        button.classList.remove("is-submitting");
+        button.innerHTML = originalButtonContent;
+      }
+
+      if (waitingMessage) {
+        waitingMessage.hidden = true;
+      }
+    }
+
+    form.addEventListener("submit", (event) => {
+      if (isSubmitting) {
+        event.preventDefault();
+        return;
+      }
+
+      isSubmitting = true;
+
+      button.classList.add("is-submitting");
+      button.textContent = "Šalje se...";
+
+      if (waitingMessage) {
+        waitingMessage.hidden = false;
+      }
+
+      // Invio HTML normale: nessun preventDefault().
+      // W3Forms gestisce il reindirizzamento.
+    });
+
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) {
+        resetFormState();
+      }
+    });
+  }
+
+  initializeSchoolForm();
+
+  document.addEventListener(
+    "astro:page-load",
+    initializeSchoolForm
+  );
+</script>
