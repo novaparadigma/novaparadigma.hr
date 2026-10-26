@@ -3,32 +3,27 @@
 
     <form
       class="uvodno-form"
-      action="https://formsubmit.co/nova.paradigma@yahoo.com"
+      action="https://api.w3forms.com/submit"
       method="POST"
       accept-charset="UTF-8"
     >
 
+      <!-- W3Forms -->
       <input
         type="hidden"
-        name="_subject"
+        name="access_key"
+        value="w3f_641a61c9bfc1525846420ef4b786e5fad5e83737d59b9d85"
+      />
+
+      <input
+        type="hidden"
+        name="subject"
         value="Prijava na uvodno predavanje NOvA – 4.11.2026."
       />
 
       <input
         type="hidden"
-        name="_template"
-        value="table"
-      />
-
-      <input
-        type="hidden"
-        name="_captcha"
-        value="false"
-      />
-
-      <input
-        type="hidden"
-        name="_next"
+        name="redirect"
         value="https://novaparadigma.hr/hvala-predavanje/"
       />
 
@@ -93,6 +88,7 @@
         type="submit"
       >
         <span>Prijavi se na uvodno predavanje</span>
+
         <span
           class="uvodno-form__arrow"
           aria-hidden="true"
@@ -351,12 +347,12 @@
     let isSubmitting = false;
 
     function resetFormState() {
-  isSubmitting = false;
+      isSubmitting = false;
 
-  if (button) {
-    button.classList.remove("is-submitting");
-    button.innerHTML = originalButtonContent;
-  }
+      if (button) {
+        button.classList.remove("is-submitting");
+        button.innerHTML = originalButtonContent;
+      }
 
       if (waitingMessage) {
         waitingMessage.hidden = true;
@@ -378,13 +374,14 @@
         waitingMessage.hidden = false;
       }
 
-      // Nessun preventDefault() al primo invio.
-      // Il browser invia normalmente i dati a FormSubmit.
-      // Il reindirizzamento è gestito dal campo _next.
+      // Invio HTML diretto a W3Forms.
+      // Non utilizziamo preventDefault() al primo invio.
+      // W3Forms gestisce il reindirizzamento
+      // alla pagina di conferma.
     });
 
-    // Ripristina lo stato se il visitatore torna indietro
-    // dopo aver lasciato la pagina.
+    // Ripristina il pulsante se il visitatore
+    // torna alla pagina tramite la cronologia.
     window.addEventListener("pageshow", (event) => {
       if (event.persisted) {
         resetFormState();
